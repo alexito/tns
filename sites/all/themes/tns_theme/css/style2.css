@@ -13,3 +13,10 @@
 .navbar-default .navbar-nav > li > a.active:focus:before {
   top: 0px;
 }
+.navbar-default{
+  top: 10px;
+}
+.navbar-nav > div.btn-log{
+    right: 10px;  
+    position: absolute;
+}
