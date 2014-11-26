@@ -22,7 +22,7 @@
                 <h1 class="first-child animated slideInDown delay-2"><?php print $node->title; ?></h1>
                 <h3 class="animated slideInDown delay-3">Beautiful Theme That Works Out Of The Box</h3>
                 <p class="text-muted animated slideInLeft delay-4"><?php print $node->body[LANGUAGE_NONE][0]['value']; ?></p>
-                <!--<a href="#" class="btn btn-lg btn-theme-primary animated fadeInUpBig delay-5">Purchase Now</a>-->
+                <?php print l('Ver más', 'node/' . $node->nid, array('attributes' => array('class' => 'btn btn-lg btn-theme-primary animated fadeInUpBig delay-4')));?>
               </div>
             </div>
           </div> <!-- / .row -->
@@ -42,4 +42,4 @@
     <i class="fa fa-angle-right"></i>
   </a>
 </div>
-  </div>
+</div>

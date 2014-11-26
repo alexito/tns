@@ -8,7 +8,28 @@ function _tns_main_settings_get_eventos_main_carousel(){
       'type' => 'evento',
   ));
   
-  print theme('eventos_main_carousel', array('nodes' => $nodes));
-  
+  print theme('eventos_main_carousel', array('nodes' => $nodes));  
 }
 
+function _tns_main_settings_quienes_somos(){ 
+  $output = array();
+  
+  print theme('quienes_somos', array('output' => $output));  
+}
+
+function _tns_main_settings_presentacion_propuestas(){ 
+  $output = array();
+  
+  print theme('presentacion_propuestas', array('output' => $output));  
+}
+
+function _tns_main_settings_suscripcion_form(){
+  $output = array();
+  module_load_include('inc', 'node', 'node.pages'); 
+  $node_form = new stdClass;
+  $node_form->type = 'suscripcion';
+  $node_form->language = LANGUAGE_NONE;
+  $form_suscripcion = drupal_get_form('suscripcion_node_form', $node_form);
+  $form = drupal_render($form_suscripcion);
+  print theme('suscripcion', array('output' => $output, 'form' => $form));  
+}

@@ -17,22 +17,22 @@ function bootstrap_css_alter(&$css) {
   $bootstrap_cdn = theme_get_setting('bootstrap_cdn');
   if ($bootstrap_cdn) {
     // Add CDN.
-    if (theme_get_setting('bootstrap_bootswatch')) {
-      $cdn = '//netdna.bootstrapcdn.com/bootswatch/' . $bootstrap_cdn  . '/' . theme_get_setting('bootstrap_bootswatch') . '/bootstrap.min.css';
-    }
-    else {
-      $cdn = '//netdna.bootstrapcdn.com/bootstrap/' . $bootstrap_cdn  . '/css/bootstrap.min.css';
-    }
-    $css[$cdn] = array(
-      'data' => $cdn,
-      'type' => 'external',
-      'every_page' => TRUE,
-      'media' => 'all',
-      'preprocess' => FALSE,
-      'group' => CSS_THEME,
-      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-      'weight' => -2,
-    );
+//    if (theme_get_setting('bootstrap_bootswatch')) {
+//      $cdn = '//netdna.bootstrapcdn.com/bootswatch/' . $bootstrap_cdn  . '/' . theme_get_setting('bootstrap_bootswatch') . '/bootstrap.min.css';
+//    }
+//    else {
+//      $cdn = '//netdna.bootstrapcdn.com/bootstrap/' . $bootstrap_cdn  . '/css/bootstrap.min.css';
+//    }
+//    $css[$cdn] = array(
+//      'data' => $cdn,
+//      'type' => 'external',
+//      'every_page' => TRUE,
+//      'media' => 'all',
+//      'preprocess' => FALSE,
+//      'group' => CSS_THEME,
+//      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+//      'weight' => -2,
+//    );
     // Add overrides.
     $override = $theme_path . '/css/overrides.css';
     $css[$override] = array(

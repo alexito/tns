@@ -102,6 +102,18 @@ function _bootstrap_theme(&$existing, $type, $theme, $path) {
     'eventos_main_carousel' => array(
         'variables' => array('nodes' => null),
         'template' => 'templates/eventos_main_carousel'
+    ),
+    'quienes_somos' => array(
+        'variables' => array('output' => null),
+        'template' => 'templates/quienes_somos'
+    ),
+    'presentacion_propuestas' => array(
+      'variables' => array('output' => null),
+      'template' => 'templates/presentacion_propuestas'
+    ),
+    'suscripcion' => array(
+      'variables' => array('output' => null, 'form' => null),
+      'template' => 'templates/suscripcion'
     )
   );
 
