@@ -24,8 +24,8 @@ base theme = bootstrap
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = bootstrap/css/bootstrap.css
-stylesheets[all][] = bootstrap/css/bootstrap-theme.css
+stylesheets[all][] = tns_theme/bootstrap/css/bootstrap.css
+stylesheets[all][] = tns_theme/css/bootstrap-theme.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/style2.css
 

@@ -1,1 +1,14 @@
 <?php
+
+/**
+ * Helper function to get the slider content.
+ */
+function _tns_main_settings_get_eventos_main_carousel(){ 
+  $nodes = node_load_multiple(array(), array(
+      'type' => 'evento',
+  ));
+  
+  print theme('eventos_main_carousel', array('nodes' => $nodes));
+  
+}
+

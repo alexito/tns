@@ -33,11 +33,11 @@ function tns_theme_links__system_main_menu($vars) {
     }
   }
   $html .= '<div class="btn-log">';
-  if ($GLOBALS->user->uid === "0" || $GLOBALS->user->uid === 0) {
+  /*if ($GLOBALS->user->uid === "0" || $GLOBALS->user->uid === 0) {
     $html .= '<a class="navbar-btn btn btn-theme-primary" href="user/login">Entrar</a>';
   } else {
     $html .= '<a class="navbar-btn btn btn-theme-primary" href="user/logout">Salir</a>';
-  }
+  }*/
 
   $html .= '</div></ul>';
   return $html;
@@ -254,6 +254,27 @@ function horizontal_login_block($form) {
       '#elm_class' => 'btn'
   );
   return $form;
+}
+
+/**
+ * Implementation Hook_theme
+ * @return type
+ */
+function tns_theme_theme() {
+  return array(
+      'eventos_main_carousel' => array(
+          'variables' => array('nodes' => null),
+          'template' => 'templates/eventos_main_carousel'
+      )
+//      'footer_content' => array(
+//          'variables' => array('output' => null),
+//          'template' => 'templates/custom-footer-content'
+//      ),
+//      'books_content' => array(
+//          'variables' => array('output' => null),
+//          'template' => 'templates/custom-books-content'
+//      ),
+  );
 }
 
 function login_bar() {

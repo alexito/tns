@@ -7,3 +7,4 @@ version = "7.x-1"
 core = "7.x"
 project = "tns_main_settings"
 
+scripts[] = js/script.js

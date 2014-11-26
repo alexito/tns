@@ -99,6 +99,10 @@ function _bootstrap_theme(&$existing, $type, $theme, $path) {
     'bootstrap_panel' => array(
       'render element' => 'element',
     ),
+    'eventos_main_carousel' => array(
+        'variables' => array('nodes' => null),
+        'template' => 'templates/eventos_main_carousel'
+    )
   );
 
   // Process custom. This should be used again for any sub-themes.

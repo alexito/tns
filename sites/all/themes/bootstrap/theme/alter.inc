@@ -45,6 +45,61 @@ function bootstrap_css_alter(&$css) {
       'browsers' => array('IE' => TRUE, '!IE' => TRUE),
       'weight' => -1,
     );
+    $paper = $theme_path . '/css/paper_style.css';
+    $css[$paper] = array(
+      'data' => $paper,
+      'type' => 'file',
+      'every_page' => TRUE,
+      'media' => 'all',
+      'preprocess' => TRUE,
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+      'weight' => -1,
+    );
+    $custom = $theme_path . '/css/custom.css';
+    $css[$custom] = array(
+      'data' => $custom,
+      'type' => 'file',
+      'every_page' => TRUE,
+      'media' => 'all',
+      'preprocess' => TRUE,
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+      'weight' => -1,
+    );
+    $awesome = $theme_path . '/css/font-awesome.css';
+    $css[$awesome] = array(
+      'data' => $awesome,
+      'type' => 'file',
+      'every_page' => TRUE,
+      'media' => 'all',
+      'preprocess' => TRUE,
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+      'weight' => -1,
+    );
+    $animate = $theme_path . '/css/animate.css';
+    $css[$animate] = array(
+      'data' => $animate,
+      'type' => 'file',
+      'every_page' => TRUE,
+      'media' => 'all',
+      'preprocess' => TRUE,
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+      'weight' => -1,
+    );
+    $lightbox = $theme_path . '/css/lightbox.css';
+    $css[$lightbox] = array(
+      'data' => $lightbox,
+      'type' => 'file',
+      'every_page' => TRUE,
+      'media' => 'all',
+      'preprocess' => TRUE,
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+      'weight' => -1,
+    );
   }
   if (!empty($excludes)) {
     $css = array_diff_key($css, drupal_map_assoc($excludes));
@@ -192,6 +247,11 @@ function bootstrap_js_alter(&$js) {
   }
 
   // Always add bootstrap.js last.
+  $bootstrap_lib = $theme_path . '/js/bootstrap_lib.js';
+  $js[$bootstrap_lib] = drupal_js_defaults($bootstrap_lib);
+  $js[$bootstrap_lib]['group'] = JS_THEME;
+  $js[$bootstrap_lib]['scope'] = 'header';
+  
   $bootstrap = $theme_path . '/js/bootstrap.js';
   $js[$bootstrap] = drupal_js_defaults($bootstrap);
   $js[$bootstrap]['group'] = JS_THEME;
@@ -230,14 +290,18 @@ function bootstrap_js_alter(&$js) {
   );
 
   // Add CDN.
-  if (theme_get_setting('bootstrap_cdn')) {
-    $cdn = '//netdna.bootstrapcdn.com/bootstrap/' . theme_get_setting('bootstrap_cdn')  . '/js/bootstrap.min.js';
-    $js[$cdn] = drupal_js_defaults();
-    $js[$cdn]['data'] = $cdn;
-    $js[$cdn]['type'] = 'external';
-    $js[$cdn]['every_page'] = TRUE;
-    $js[$cdn]['weight'] = -100;
-  }
+//  if (theme_get_setting('bootstrap_cdn')) {
+//    $cdn = '//netdna.bootstrapcdn.com/bootstrap/' . theme_get_setting('bootstrap_cdn')  . '/js/bootstrap.min.js';
+//    $js[$cdn] = drupal_js_defaults();
+//    $js[$cdn]['data'] = $cdn;
+//    $js[$cdn]['type'] = 'external';
+//    $js[$cdn]['every_page'] = TRUE;
+//    $js[$cdn]['weight'] = -100;
+//  }
+  
+  $js['misc/jquery.js']['data'] = drupal_get_path('theme', 'bootstrap') . '/js/jquery-1.11.min.js';
+
+  $js['misc/jquery.js']['version'] = '1.11.0';
 }
 
 /**
