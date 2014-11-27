@@ -34,6 +34,12 @@
       </p>
     </div>
   </div>
+  <hr>
+  <div class="col-sm-12">
+    <?php
+      print $form;
+    ?>
+  </div>
 
   <div class="clearfix"></div>
 </div>

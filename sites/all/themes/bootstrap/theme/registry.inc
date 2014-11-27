@@ -108,12 +108,16 @@ function _bootstrap_theme(&$existing, $type, $theme, $path) {
         'template' => 'templates/quienes_somos'
     ),
     'presentacion_propuestas' => array(
-      'variables' => array('output' => null),
+      'variables' => array('output' => null, 'form' => null),
       'template' => 'templates/presentacion_propuestas'
     ),
     'suscripcion' => array(
       'variables' => array('output' => null, 'form' => null),
       'template' => 'templates/suscripcion'
+    ),
+    'contactanos' => array(
+      'variables' => array('output' => null, 'form' => null),
+      'template' => 'templates/contactanos'
     )
   );
 
