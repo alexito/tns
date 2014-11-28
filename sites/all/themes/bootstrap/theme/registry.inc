@@ -118,6 +118,10 @@ function _bootstrap_theme(&$existing, $type, $theme, $path) {
     'contactanos' => array(
       'variables' => array('output' => null, 'form' => null),
       'template' => 'templates/contactanos'
+    ),
+    'calwidget' => array(
+      'variables' => array('output' => null),
+      'template' => 'templates/calwidget'
     )
   );
 

@@ -1,5 +1,5 @@
 <div class="home-slider">
-  <div id="home-slider" class="carousel slide" data-ride="carousel">
+  <div id="home-slider" class="carousel slide" data-ride="carousel" data-interval="false">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php $i = 0; 
@@ -17,7 +17,7 @@
       
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="home-slider__content">
                 <h1 class="first-child animated slideInDown delay-2"><?php print $node->title; ?></h1>
                 <h3 class="animated slideInDown delay-3">Beautiful Theme That Works Out Of The Box</h3>

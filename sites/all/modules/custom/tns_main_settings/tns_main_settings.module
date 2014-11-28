@@ -11,6 +11,12 @@ function _tns_main_settings_get_eventos_main_carousel(){
   print theme('eventos_main_carousel', array('nodes' => $nodes));  
 }
 
+function _tns_main_settings_calwidget(){ 
+  $output = array();
+  
+  print theme('calwidget', array('output' => $output));  
+}
+
 function _tns_main_settings_quienes_somos(){ 
   $output = array();
   

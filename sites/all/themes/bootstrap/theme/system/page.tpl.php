@@ -1,6 +1,6 @@
 <?php ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="container">
+  <div class="container custom-first-part">
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">

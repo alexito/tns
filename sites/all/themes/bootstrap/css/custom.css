@@ -97,51 +97,33 @@ footer{
   width: 10% !important;
 }
 .navbar-default .navbar-nav > li > a.active {
-  background-image: -webkit-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
-  background-image: -o-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), to(#e2e2e2));
-  background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);
-  background-repeat: repeat-x;
-  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
-  box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
 }
-/*.home-slider .carousel-inner > .item .bg-img {
-  position: absolute;
-  top: 0;
-  height: 75%;
-  left: 0;
+.navbar-default .navbar-nav > li > a {
+text-align: center;
 }
-.custom-carousel-footer{
-  position: absolute;
-  bottom: 0;
+
+.container.custom-first-part{
+  border-bottom: 3px solid #ed3e49;
 }
-.home-slider p {
-  margin: 0px 0;
-  line-height: 1.5;
+.navbar-default .navbar-nav > .active > a{
+  font-weight: 700;
 }
-.home-slider h3 {
-  margin: 0;
+#calendar{
+  border: 1px solid #ccc;
+padding: 10px 5px;
+border-radius: 15px;
+margin-top: 15px
 }
-.home-slider .btn-theme-primary{
-  position: absolute;
-  bottom: 50px;
-  right: 10px;
+#calendar table{
+  width:100%;
 }
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: initial; 
-  z-index: 15;
-  width: 50%;
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none;
-  text-align: right;
-  right: 28px;
+#calendar table td.current-month{
+  
 }
-.home-slider .carousel-inner > .item .home-slider__content {
-  padding-top: 0;
-  height: 120px;
-  border-right: 2px solid #c1c1c1;
-}*/
+#calendar table td.current-month.today{
+  color: #ed3e49;
+  font-weight: 700;
+}
+#calendar table td.other-month{
+  color: #ccc;
+}
