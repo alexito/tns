@@ -20,8 +20,16 @@
             <div class="col-sm-3">
               <div class="home-slider__content">
                 <h1 class="first-child animated slideInDown delay-2"><?php print $node->title; ?></h1>
-                <h3 class="animated slideInDown delay-3">Beautiful Theme That Works Out Of The Box</h3>
-                <p class="text-muted animated slideInLeft delay-4"><?php print $node->body[LANGUAGE_NONE][0]['value']; ?></p>
+                <h3 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->title->value(); ?></h3>
+                <h5 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->field_ubicacion->value(); ?></h5>
+                <?php 
+                $detalle_evento = $node->body[LANGUAGE_NONE][0]['value'];
+                if(strlen($detalle_evento) > 160) { ?>
+                <p class="text-muted animated slideInLeft delay-4"><?php print substr($detalle_evento, 0, 160) . '...'; ?></p>
+                <?php }else{ ?>
+                <p class="text-muted animated slideInLeft delay-4"><?php print $detalle_evento; ?></p>
+                <?php } ?>
+                
                 <?php print l('Ver más', 'node/' . $node->nid, array('attributes' => array('class' => 'btn btn-lg btn-theme-primary animated fadeInUpBig delay-4')));?>
               </div>
             </div>

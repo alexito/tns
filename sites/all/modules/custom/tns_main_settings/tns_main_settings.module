@@ -8,7 +8,66 @@ function _tns_main_settings_get_eventos_main_carousel(){
       'type' => 'evento',
   ));
   
-  print theme('eventos_main_carousel', array('nodes' => $nodes));  
+  $today = strtotime(date("Y-m-d H:i:s"));
+  $show_nodes = array();
+  $fechas_array = new stdClass();
+  $i = 0;
+  
+  foreach($nodes as $node){
+    
+    $escenarios = field_get_items('node', $node, 'field_informacion');//Escenario    
+    
+    foreach ($escenarios as $escenario) {
+      $fc = field_collection_field_get_entity($escenario);
+      $wrapper = entity_metadata_wrapper('field_collection_item', $fc);
+      $f_fecha = $wrapper->field_fecha->value();      
+      $escenario = ($wrapper->field_pertenece_al_tns->value()) ? $wrapper->field_escenario->value() : $wrapper->field_escenario_externo->value();
+      
+      $fecha = strtotime($f_fecha['value']);
+      
+      if($fecha < $today){ /////ESTO DEBE SER MAYOR QUE
+        
+        $repetido = false;
+        
+        for($j = 0; $j < $i; $j++){
+          if($fechas_array->data[$j]->nid == $node->nid) {
+            $repetido = true;
+            if($fecha < $fechas_array->data[$j]->fecha){
+              $fechas_array->data[$j]->fecha = $fecha;
+            }
+            break;
+          }
+        }
+        
+        if(!$repetido){
+          $fechas_array->data[$i] = new stdClass();
+          $fechas_array->data[$i]->fecha = $fecha;
+          $fechas_array->data[$i]->fecha_desde = $f_fecha['value'];
+          $fechas_array->data[$i]->fecha_hasta = $f_fecha['value2'];
+          $fechas_array->data[$i]->escenario = entity_metadata_wrapper('node', $escenario);          
+        }else{
+          $i--;
+        }
+        
+        $fechas_array->data[$i]->nid = $node->nid;
+        $i++;        
+      }      
+    }  
+  }
+  
+  usort($fechas_array->data, 'sort_objects_by_fecha');
+  
+  foreach($fechas_array->data as $k => $n){
+    $show_nodes[$n->nid] = $nodes[$n->nid];
+    $show_nodes[$n->nid]->detalle = $n;
+  }
+
+  print theme('eventos_main_carousel', array('nodes' => $show_nodes));  
+}
+
+function sort_objects_by_fecha($a, $b) {
+  if($a->fecha == $b->fecha){ return 0 ; }
+  return ($a->fecha < $b->fecha) ? -1 : 1;
 }
 
 function _tns_main_settings_calwidget(){ 
@@ -49,4 +108,10 @@ function _tns_main_settings_contactanos(){
   $output = array();
   
   print theme('contactanos', array('output' => $output));  
+}
+
+function _tns_main_settings_logo_revista(){ 
+  $output = array();
+  
+  print theme('logorevista', array('output' => $output));  
 }

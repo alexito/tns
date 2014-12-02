@@ -122,6 +122,10 @@ function _bootstrap_theme(&$existing, $type, $theme, $path) {
     'calwidget' => array(
       'variables' => array('output' => null),
       'template' => 'templates/calwidget'
+    ),
+    'logorevista' => array(
+      'variables' => array('output' => null),
+      'template' => 'templates/logorevista'
     )
   );
 

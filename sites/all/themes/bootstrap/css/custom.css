@@ -127,3 +127,12 @@ margin-top: 15px
 #calendar table td.other-month{
   color: #ccc;
 }
+
+.logorevista{
+  background-image: url('../img/img-logo-revista.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  //width:100%;
+  height: 100px;
+  margin-top:20px;
+}
