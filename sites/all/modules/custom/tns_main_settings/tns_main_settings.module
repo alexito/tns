@@ -4,6 +4,12 @@
  * Helper function to get the slider content.
  */
 function _tns_main_settings_get_eventos_main_carousel(){ 
+  $show_nodes = _tns_main_settings_get_eventos();
+
+  print theme('eventos_main_carousel', array('nodes' => $show_nodes));  
+}
+
+function _tns_main_settings_get_eventos(){
   $nodes = node_load_multiple(array(), array(
       'type' => 'evento',
   ));
@@ -61,8 +67,7 @@ function _tns_main_settings_get_eventos_main_carousel(){
     $show_nodes[$n->nid] = $nodes[$n->nid];
     $show_nodes[$n->nid]->detalle = $n;
   }
-
-  print theme('eventos_main_carousel', array('nodes' => $show_nodes));  
+  return $show_nodes;
 }
 
 function sort_objects_by_fecha($a, $b) {
@@ -105,13 +110,21 @@ function _tns_main_settings_suscripcion_form(){
 }
 
 function _tns_main_settings_contactanos(){ 
-  $output = array();
-  
+  $output = array();  
   print theme('contactanos', array('output' => $output));  
 }
 
 function _tns_main_settings_logo_revista(){ 
-  $output = array();
-  
+  $output = array();  
   print theme('logorevista', array('output' => $output));  
+}
+
+function _tns_main_settings_items_varios(){ 
+  $output = _tns_main_settings_get_eventos();  
+  print theme('itemsvarios', array('output' => $output));  
+}
+
+function _tns_main_settings_evento_proximo(){ 
+  $output = _tns_main_settings_get_eventos();  
+  print theme('eventoproximo', array('output' => $output));  
 }

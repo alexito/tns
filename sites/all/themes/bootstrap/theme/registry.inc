@@ -126,6 +126,14 @@ function _bootstrap_theme(&$existing, $type, $theme, $path) {
     'logorevista' => array(
       'variables' => array('output' => null),
       'template' => 'templates/logorevista'
+    ),
+    'itemsvarios' => array(
+      'variables' => array('output' => null),
+      'template' => 'templates/itemsvarios'
+    ),
+    'eventoproximo' => array(
+      'variables' => array('output' => null),
+      'template' => 'templates/eventoproximo'
     )
   );
 

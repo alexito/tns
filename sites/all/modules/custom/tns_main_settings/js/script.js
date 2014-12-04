@@ -48,7 +48,7 @@
 				var prev_month = '<a href="?month=' + (month) + '&amp;year=' + (year) + '" title="' + monthNames[month - 1] + ' ' + (year) + '">' + monthNames[month - 1] + ' ' + (year) + '</a>';
 			}		
 		    
-            table += ('<div><span> < </span><span> > </span></div>');
+            table += ('<div><span class="m-back"> <i class="fa fa-chevron-left"></i> </span><span class="m-next"> <i class="fa fa-chevron-right"></i> </span></div>');
             
 			table += ('<h3 id="current-month">'+monthNames[month]+' '+year+'</h3>');
 			// uncomment the following lines if you'd like to display calendar month based on 'month' and 'view' paramaters from the URL

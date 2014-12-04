@@ -1,10 +1,12 @@
 <div class="home-slider">
-  <div id="home-slider" class="carousel slide" data-ride="carousel" data-interval="false">
+  <!--<div id="home-slider" class="carousel slide" data-ride="carousel">-->
+    <div id="home-slider" class="carousel slide" data-ride="carousel" data-interval="false">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php $i = 0; 
     foreach ($nodes as $id => $node): ?>
     <li data-target="#home-slider" data-slide-to="<?php print $i++; ?>" class=""></li>
+    <?php if($i == 6){break;}?>
     <?php endforeach; ?>
   </ol>
   <!-- Wrapper for slides -->
@@ -17,7 +19,7 @@
       
         <div class="container">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="home-slider__content">
                 <h1 class="first-child animated slideInDown delay-2"><?php print $node->title; ?></h1>
                 <h3 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->title->value(); ?></h3>
@@ -40,6 +42,7 @@
         </div>
       
     </div> <!-- / .item -->
+    <?php if($i == 7){break;}?>
     <?php endforeach; ?>
   </div> <!-- / .carousel -->
   <!-- Controls -->

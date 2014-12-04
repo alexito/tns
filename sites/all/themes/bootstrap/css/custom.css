@@ -51,6 +51,10 @@ footer{
   background-repeat: no-repeat;
   background-size: contain;
 }
+#calendar h3{
+  margin-top: 0;
+  margin-left: 2%;
+}
 .custom-header-buttons .custom-img-link.teatrosucre{
   background-image: url('../img/btn_teatrosucre_off.png');
 }
@@ -110,12 +114,13 @@ text-align: center;
 }
 #calendar{
   border: 1px solid #ccc;
-padding: 10px 5px;
-border-radius: 15px;
-margin-top: 15px
+  padding: 10px 5px;
+  border-radius: 15px;
+  margin: 10px 0;
 }
 #calendar table{
-  width:100%;
+  width: 98%;
+  margin-left: 3%;
 }
 #calendar table td.current-month{
   
@@ -133,6 +138,62 @@ margin-top: 15px
   background-repeat: no-repeat;
   background-size: contain;
   //width:100%;
+  /* height: 105px; */
+  /* margin-top:20px; */
+  width: auto;
   height: 100px;
-  margin-top:20px;
+  display: block;
+}
+.eventoproximo img,
+.itemsvarios img{
+  width: 100%;
+}
+.itemsvarios .evento-escenario{
+  font-size: 12px;
+}
+.itemsvarios a{
+  color: #333333;
+}
+.itemsvarios .detalles{
+  background-color: #333333;
+  display: block;
+  min-height: 100px;
+}
+.eventoproximo .detalles p,
+.itemsvarios .detalles p{  
+  color: #fefefe;
+  padding: 0 4px;
+  margin: 0;
+}
+.itemsvarios i.fa{
+  font-size: 115px;
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+}
+.eventoproximo .detalles{
+  background-color: #333333;
+  position: absolute;
+  width: 100%;
+  top: 66px;
+  font-size: 12px;
+}
+.eventoproximo .item{
+  padding: 0;
+  width: 100%;
+}
+.no-padding{
+  padding: 1px;
+}
+.no-top-margin{
+  margin-top: 0;
+}
+.m-back{
+    margin-left: 20px;
+    cursor: pointer;
+}
+.m-next{
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
 }
