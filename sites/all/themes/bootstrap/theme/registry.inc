@@ -134,6 +134,10 @@ function _bootstrap_theme(&$existing, $type, $theme, $path) {
     'eventoproximo' => array(
       'variables' => array('output' => null),
       'template' => 'templates/eventoproximo'
+    ),
+    'fotos_mini' => array(
+      'variables' => array('output' => null),
+      'template' => 'templates/fotos_mini'
     )
   );
 

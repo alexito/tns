@@ -1,4 +1,4 @@
-<h3 class="no-top-margin">Evento:</h3>
+<h3 class="no-top-margin no-bottom-margin">Evento:</h3>
 <div class="container eventoproximo no-padding">
   <?php
   $i = 1;

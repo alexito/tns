@@ -1,4 +1,4 @@
-<div class="col-sm-10">
+<div class="col-sm-12">
   <!-- Blog Post #1 -->
   <div class="blog">
     <div class="blog-desc">

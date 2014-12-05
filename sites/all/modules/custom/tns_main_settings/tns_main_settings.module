@@ -128,3 +128,7 @@ function _tns_main_settings_evento_proximo(){
   $output = _tns_main_settings_get_eventos();  
   print theme('eventoproximo', array('output' => $output));  
 }
+
+function _tns_main_settings_fotos_mini($data){ 
+  print theme('fotos_mini', array('output' => $data->field_field_fotos));  
+}

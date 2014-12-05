@@ -19,7 +19,7 @@
       
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-lg-3">
               <div class="home-slider__content">
                 <h1 class="first-child animated slideInDown delay-2"><?php print $node->title; ?></h1>
                 <h3 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->title->value(); ?></h3>
