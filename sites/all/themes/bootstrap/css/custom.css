@@ -35,12 +35,12 @@ footer{
 .qs-item.producciones-propias{
   background-image: url('../img/img-producciones-propias.jpg');  
 }
-.presentacion-propuestas{
-  height: 140px;
+.view-id-varios .views-field-field-imagen-encabezado img{
+  max-height: 140px;
   margin-bottom: 20px;
-  background-image: url('../img/img-presentacion-propuestas-encabezado.jpg');    
-  background-repeat: no-repeat;
-  background-size: contain;
+  width: 100%;
+  height: auto;
+  max-width: 700px;
 }
 .custom-header-buttons{
   top: 100px
@@ -137,9 +137,6 @@ text-align: center;
   background-image: url('../img/img-logo-revista.jpg');
   background-repeat: no-repeat;
   background-size: contain;
-  //width:100%;
-  /* height: 105px; */
-  /* margin-top:20px; */
   width: auto;
   height: 100px;
   display: block;
@@ -226,4 +223,28 @@ text-align: center;
   width: 100%;
   height: auto;
   max-width: 700px;
+}
+span.marker{
+  color: #ed3e49;
+  font-size: 10px;
+  font-weight: 700;
+}
+.custom-margin-bottom{
+  margin-bottom: 20px;
+}
+.pane-views.pane-nos-apoyan,
+.pane-views.pane-escenarios-del-tns{
+  display: inline-block;
+}
+.pane-views.pane-nos-apoyan a.display-inline{
+  display: inline-block;
+}
+.img-parqueaderos{
+  background-image: url('../img/img-parqueaderos.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  //background-position: center;
+  width: 100%;
+  height: 800px;
+  display: block;
 }

@@ -1,6 +1,6 @@
 <div class="col-sm-12">
   <!-- Blog Post #1 -->
-  <div class="blog">
+<!--  <div class="blog">
     <div class="blog-desc">
       <div class="col-sm-12 presentacion-propuestas">
         
@@ -33,7 +33,7 @@
         Mayor información: (02) 2951661, ext. 111
       </p>
     </div>
-  </div>
+  </div>-->
   <hr>
   <div class="col-sm-12">
     <?php

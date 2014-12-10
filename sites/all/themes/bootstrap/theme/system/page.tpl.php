@@ -110,8 +110,8 @@
 <?php //print render($page['footer']);    ?>
   <div class="row">
     <div class="col-sm-12">
-      <div class="col-sm-2"><a href="#">¿Cómo llegar?</a></div>
-      <div class="col-sm-1"><a href="#"> Nos Apoyan</a></div>
+      <div class="col-sm-2"><a href="como-llegar">¿Cómo llegar?</a></div>
+      <div class="col-sm-1"><a href="nos-apoyan"> Nos Apoyan</a></div>
       <div class="col-sm-2"><a href="#"> Convocatorias / Noticias</a></div>
       <div class="col-sm-2"><a href="#"> Mapa del Sitio</a></div>
       <div class="col-sm-1"><a href="#"> RSS</a></div>

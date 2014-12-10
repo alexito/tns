@@ -88,30 +88,60 @@ function _tns_main_settings_quienes_somos(){
 }
 
 function _tns_main_settings_presentacion_propuestas(){ 
+  global $user;
   $output = array();
   module_load_include('inc', 'node', 'node.pages'); 
   $node_form = new stdClass;
   $node_form->type = 'propuesta';
   $node_form->language = LANGUAGE_NONE;
+  $node_form->uid = $user->uid;
+  $node_form->status = 1;
+  $node_form->revision = FALSE;
+  $node_form->comment = 0;
+  $node_form->promote = 0;
+  $node_form->sticky = 0;
+  $node_form->log = NULL;
   $form_suscripcion = drupal_get_form('propuesta_node_form', $node_form);
   $form = drupal_render($form_suscripcion);  
   print theme('presentacion_propuestas', array('output' => $output, 'form' => $form));   
 }
 
 function _tns_main_settings_suscripcion_form(){
+  global $user;
   $output = array();
   module_load_include('inc', 'node', 'node.pages'); 
   $node_form = new stdClass;
   $node_form->type = 'suscripcion';
   $node_form->language = LANGUAGE_NONE;
+  $node_form->uid = $user->uid;
+  $node_form->status = 1;
+  $node_form->revision = FALSE;
+  $node_form->comment = 0;
+  $node_form->promote = 0;
+  $node_form->sticky = 0;
+  $node_form->log = NULL;
   $form_suscripcion = drupal_get_form('suscripcion_node_form', $node_form);
   $form = drupal_render($form_suscripcion);
   print theme('suscripcion', array('output' => $output, 'form' => $form));  
 }
 
 function _tns_main_settings_contactanos(){ 
-  $output = array();  
-  print theme('contactanos', array('output' => $output));  
+  global $user;
+  $output = array();
+  module_load_include('inc', 'node', 'node.pages'); 
+  $node_form = new stdClass;
+  $node_form->type = 'contactanos';
+  $node_form->language = LANGUAGE_NONE;
+  $node_form->uid = $user->uid;
+  $node_form->status = 1;
+  $node_form->revision = FALSE;
+  $node_form->comment = 0;
+  $node_form->promote = 0;
+  $node_form->sticky = 0;
+  $node_form->log = NULL;
+  $form_suscripcion = drupal_get_form('suscripcion_node_form', $node_form);
+  $form = drupal_render($form_suscripcion);
+  print theme('contactanos', array('output' => $output, 'form' => $form));  
 }
 
 function _tns_main_settings_logo_revista(){ 
@@ -131,4 +161,11 @@ function _tns_main_settings_evento_proximo(){
 
 function _tns_main_settings_fotos_mini($data){ 
   print theme('fotos_mini', array('output' => $data->field_field_fotos));  
+}
+/**
+ * Implement hook_init
+ */
+function tns_main_settings_init(){
+  drupal_add_library('system', 'ui.datepicker');
+  drupal_add_js("(function ($) { $('.datepicker').datepicker(); })(jQuery);", array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
 }

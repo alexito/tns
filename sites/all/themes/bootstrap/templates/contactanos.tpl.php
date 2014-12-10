@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-  <div class="blog">
+<!--  <div class="blog">
     <div class="blog-desc">
       <div class="col-sm-12 contactanos">
         
@@ -24,6 +24,12 @@
         Si quieres ser parte del equipo de la Fundación Teatro Nacional Sucre envía tu Curriculum Vitae a Talento humano, al mail: mabad@teatrosucre.com
       </p>
     </div>
+  </div>-->
+  <hr>
+  <div class="col-sm-12">
+    <?php
+      print $form;
+    ?>
   </div>
 
   <div class="clearfix"></div>
