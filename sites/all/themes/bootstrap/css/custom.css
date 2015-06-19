@@ -55,6 +55,7 @@ footer{
   margin-top: 0;
   margin-left: 2%;
 }
+
 .custom-header-buttons .custom-img-link.teatrosucre{
   background-image: url('../img/btn_teatrosucre_off.png');
 }
@@ -117,6 +118,7 @@ text-align: center;
   padding: 10px 5px;
   border-radius: 15px;
   margin: 10px 0;
+  min-height: 210px;
 }
 #calendar table{
   width: 98%;
@@ -132,7 +134,16 @@ text-align: center;
 #calendar table td.other-month{
   color: #ccc;
 }
-
+#calendar.loading:before{
+  content: " ";
+  background-image: url('../img/loading.gif');
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  display: block;
+}
 .logorevista{
   background-image: url('../img/img-logo-revista.jpg');
   background-repeat: no-repeat;
@@ -247,4 +258,52 @@ span.marker{
   width: 100%;
   height: 800px;
   display: block;
+}
+.yes-event span{
+  background-color: #449d44;
+  border-radius: 50%;
+  padding: 2px;
+}
+.today span a,
+.yes-event span a{
+  color: #fff;
+}
+.expired.yes-event span{
+  background-color: #ec971f;
+}
+.today span{
+  background-color: #31b0d5;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+ /* Popover */
+.popover {
+    border: 2px dotted red;
+}
+
+/* Popover Header */
+.popover-title {
+    background-color: #8AC007; 
+    color: #FFFFFF; 
+    font-size: 28px;
+    text-align:center;
+}
+
+/* Popover Body */
+.popover-content {
+    background-color: coral;
+    color: #FFFFFF;
+    padding: 25px;
+}
+
+/* Popover Arrow */
+.arrow {
+    border-right-color: red !important;
+}
+.tooltip-inner{
+  text-align: left;
+}
+.tooltip-inner ul li{
+  margin-left: -20px;
 }

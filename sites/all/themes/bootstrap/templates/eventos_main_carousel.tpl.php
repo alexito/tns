@@ -6,7 +6,7 @@
     <?php $i = 0; 
     foreach ($nodes as $id => $node): ?>
     <li data-target="#home-slider" data-slide-to="<?php print $i++; ?>" class=""></li>
-    <?php if($i == 6){break;}?>
+    <?php if($i == 7){break;}?>
     <?php endforeach; ?>
   </ol>
   <!-- Wrapper for slides -->
@@ -21,16 +21,19 @@
           <div class="row">
             <div class="col-sm-4 col-lg-3">
               <div class="home-slider__content">
-                <h1 class="first-child animated slideInDown delay-2"><?php print $node->title; ?></h1>
+                <h1 class="first-child animated slideInDown delay-2"><?php 
+                print (strlen($node->title) > 35) ? substr($node->title, 0 ,35) . '...' : $node->title; 
+                ?></h1>
                 <h3 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->title->value(); ?></h3>
                 <h5 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->field_ubicacion->value(); ?></h5>
                 <?php 
                 $detalle_evento = $node->body[LANGUAGE_NONE][0]['value'];
-                if(strlen($detalle_evento) > 160) { ?>
-                <p class="text-muted animated slideInLeft delay-4"><?php print substr($detalle_evento, 0, 160) . '...'; ?></p>
-                <?php }else{ ?>
-                <p class="text-muted animated slideInLeft delay-4"><?php print $detalle_evento; ?></p>
-                <?php } ?>
+                 ?>
+                <p class="text-muted animated slideInLeft delay-4">
+                  <?php
+                  print (strlen($detalle_evento) > 150) ? substr($detalle_evento, 0, 150) . '...' : $detalle_evento; 
+                  ?>
+                </p>
                 
                 <?php print l('Ver más', 'node/' . $node->nid, array('attributes' => array('class' => 'btn btn-lg btn-theme-primary animated fadeInUpBig delay-4')));?>
               </div>

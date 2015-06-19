@@ -1,3 +1,3 @@
-<div id="calendar" class="datepicker">
+<div id="calendar" class="">
 
 </div>
