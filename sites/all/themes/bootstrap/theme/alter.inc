@@ -34,17 +34,6 @@ function bootstrap_css_alter(&$css) {
 //      'weight' => -2,
 //    );
     // Add overrides.
-    $override = $theme_path . '/css/overrides.css';
-    $css[$override] = array(
-      'data' => $override,
-      'type' => 'file',
-      'every_page' => TRUE,
-      'media' => 'all',
-      'preprocess' => TRUE,
-      'group' => CSS_THEME,
-      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-      'weight' => -1,
-    );
     $paper = $theme_path . '/css/paper_style.css';
     $css[$paper] = array(
       'data' => $paper,
@@ -56,6 +45,18 @@ function bootstrap_css_alter(&$css) {
       'browsers' => array('IE' => TRUE, '!IE' => TRUE),
       'weight' => -1,
     );
+    $override = $theme_path . '/css/overrides.css';
+    $css[$override] = array(
+      'data' => $override,
+      'type' => 'file',
+      'every_page' => TRUE,
+      'media' => 'all',
+      'preprocess' => TRUE,
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+      'weight' => -1,
+    );
+    
     $custom = $theme_path . '/css/custom.css';
     $css[$custom] = array(
       'data' => $custom,
@@ -247,15 +248,16 @@ function bootstrap_js_alter(&$js) {
   }
 
   // Always add bootstrap.js last.
+  $bootstrap = $theme_path . '/js/bootstrap.js';
+  $js[$bootstrap] = drupal_js_defaults($bootstrap);
+  $js[$bootstrap]['group'] = JS_THEME;
+  $js[$bootstrap]['scope'] = 'footer';
+  
   $bootstrap_lib = $theme_path . '/js/bootstrap_lib.js';
   $js[$bootstrap_lib] = drupal_js_defaults($bootstrap_lib);
   $js[$bootstrap_lib]['group'] = JS_THEME;
   $js[$bootstrap_lib]['scope'] = 'header';
   
-  $bootstrap = $theme_path . '/js/bootstrap.js';
-  $js[$bootstrap] = drupal_js_defaults($bootstrap);
-  $js[$bootstrap]['group'] = JS_THEME;
-  $js[$bootstrap]['scope'] = 'footer';
   
   $bootstrap = $theme_path . '/js/lightbox.min.js';
   $js[$bootstrap] = drupal_js_defaults($bootstrap);
@@ -304,9 +306,9 @@ function bootstrap_js_alter(&$js) {
 //    $js[$cdn]['weight'] = -100;
 //  }
   
-  $js['misc/jquery.js']['data'] = drupal_get_path('theme', 'bootstrap') . '/js/jquery-1.11.min.js';
+  // $js['misc/jquery.js']['data'] = drupal_get_path('theme', 'bootstrap') . '/js/jquery-1.11.min.js';
 
-  $js['misc/jquery.js']['version'] = '1.11.0';
+  // $js['misc/jquery.js']['version'] = '1.11.0';
 }
 
 /**

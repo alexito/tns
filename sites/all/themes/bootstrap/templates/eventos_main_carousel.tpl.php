@@ -22,7 +22,7 @@
             <div class="col-sm-4 col-lg-3">
               <div class="home-slider__content">
                 <h1 class="first-child animated slideInDown delay-2"><?php 
-                print (strlen($node->title) > 35) ? substr($node->title, 0 ,35) . '...' : $node->title; 
+                print (strlen($node->title) > 30) ? substr($node->title, 0 ,30) . '...' : $node->title; 
                 ?></h1>
                 <h3 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->title->value(); ?></h3>
                 <h5 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->field_ubicacion->value(); ?></h5>

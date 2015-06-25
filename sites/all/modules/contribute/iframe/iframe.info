@@ -10,9 +10,9 @@ files[] = iframe.install
 required = FALSE
 
 
-; Information added by Drupal.org packaging script on 2014-05-29
-version = "7.x-1.1"
+; Information added by Drupal.org packaging script on 2015-04-08
+version = "7.x-1.3"
 core = "7.x"
 project = "iframe"
-datestamp = "1401396528"
+datestamp = "1428451383"
 
