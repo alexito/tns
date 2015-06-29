@@ -2,6 +2,13 @@
   Drupal.behaviors.tns_main_settings = {
     attach: function (context, settings) {
       $(window).load(function () {
+        // AGENDA ELENCOS
+        $('body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping > .view-grouping-header').addClass('col-sm-5 col-md-5');
+        $('body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping > .view-grouping-content').addClass('col-sm-7 col-md-7');
+        
+
+
+        // CALENDARIO
         var d = new Date(), day, month, year;
         
         fecha = location.pathname.split('/');

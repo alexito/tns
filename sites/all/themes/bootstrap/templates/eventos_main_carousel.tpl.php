@@ -22,7 +22,7 @@
             <div class="col-sm-4 col-lg-3">
               <div class="home-slider__content">
                 <h1 class="first-child animated slideInDown delay-2"><?php 
-                print (strlen($node->title) > 30) ? substr($node->title, 0 ,30) . '...' : $node->title; 
+                print l((strlen($node->title) > 30) ? substr($node->title, 0 ,30) . '...' : $node->title, 'node/' . $node->nid); 
                 ?></h1>
                 <h3 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->title->value(); ?></h3>
                 <h5 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->field_ubicacion->value(); ?></h5>
@@ -41,7 +41,9 @@
           </div> <!-- / .row -->
         </div> <!-- / .container -->
         <div class="bg-img hidden-xs">
+          <a href="/node/<?php print($node->nid)?>">
           <img src="<?php print file_create_url($node->field_imagen_del_evento['und'][0]['uri']); ?>" alt="...">
+          </a>
         </div>
       
     </div> <!-- / .item -->

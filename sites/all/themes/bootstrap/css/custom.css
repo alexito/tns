@@ -2,6 +2,13 @@ body.page-presentacion-propuestas #propuesta-node-form #edit-field-archivo .inpu
 body.bootstrap-anchors-processed .filter-wrapper{
   display: none;
 }
+*.views-field-title,
+*.page-header {
+  color: #ed3e49;
+}
+*.field-content p{
+  text-align: justify;
+}
 
 .navbar-header{
   width: 100%;
@@ -340,3 +347,94 @@ span.marker{
 .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{
   margin-left: 0;
 }
+.page-nuestras-producciones-propias .pane-nuestras-producciones-panel-pane-1 .view-content,
+.page-nuestros-proyectos .pane-nuestros-proyectos-panel-pane-1 .view-content,
+.page-nuestros-elencos .view-display-id-panel_pane_1 .view-content,
+.view-id-teatro.view-display-id-panel_pane_5 .view-content{
+  display: inline-block;
+}
+.views-field-field-imagen-encabezado img{
+  height: auto;
+  width: 100%;
+}
+.view-id-teatro.view-display-id-panel_pane_5 .view-content .views-row{
+  min-height: 200px;
+  margin: 15px 0;
+}
+.view-id-teatro.view-display-id-panel_pane_5 .view-content .field-content{
+  text-align: center;
+}
+
+.view-id-teatro.view-display-id-panel_pane_5 .view-content .views-field-field-logo .field-content{
+  min-height: 45px;
+}
+.view-id-teatro.view-display-id-panel_pane_5 .view-content .views-field-title .field-content{
+  min-height: 40px;
+  margin: 3px 0;
+  width: 100%;
+  display: block;
+}
+.page-nuestros-teatros .pane-teatro-panel-pane-5 .view-content .views-field-field-imagen-menu img,
+.page-nuestras-producciones-propias .pane-nuestras-producciones-panel-pane-1 .view-content img,
+.page-nuestros-proyectos .pane-nuestros-proyectos-panel-pane-1 .view-content img, 
+.page-nuestros-elencos .view-display-id-panel_pane_1 .view-content img{
+  height: auto;
+  width: 100%;
+  max-height: 120px;
+  max-width: 360px;
+}
+.page-nuestras-producciones-propias .pane-nuestras-producciones-panel-pane-1 .view-content .views-row,
+.page-nuestros-proyectos .pane-nuestros-proyectos-panel-pane-1 .view-content .views-row,
+.page-nuestros-elencos .view-display-id-panel_pane_1 .view-content .views-row{
+  min-height: 165px;
+  margin: 15px 0;
+}
+.page-nuestras-producciones-propias .pane-nuestras-producciones-panel-pane-1 .view-content .views-field-title .field-content,
+.page-nuestros-proyectos .pane-nuestros-proyectos-panel-pane-1 .view-content .views-field-title .field-content,
+.page-nuestros-elencos .view-display-id-panel_pane_1 .view-content .views-field-title .field-content{
+  min-height: 40px;
+  margin: 3px 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.view-id-elencos.view-display-id-panel_pane_2 .view-content .views-field-nothing{
+  margin-top: 15px;
+}
+.views-field-field-imagen-menu .field-content{
+  text-align: center;
+}
+
+
+body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping{
+  display: inline-block;
+  margin: 10px 0;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 20px;
+  width: 100%
+}
+
+body.page-agenda-elencos .view-agenda-elencos .view-content .view-grouping .view-grouping-header{
+  text-align: center;
+}
+body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping  > .view-grouping-header img{
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  max-width: 360px;
+}
+
+body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping  > .view-grouping-content h3{
+  margin: 0 0 10px 0;
+  font-size: 17px;
+}
+
+body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping  > .view-grouping-content .views-row{
+  margin: 0;
+}
+
+
+
+
+
+
