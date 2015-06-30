@@ -16,7 +16,7 @@ function tns_main_settings_menu(){
 
 
 function _tns_main_settings_events_year_month($date) {
-  $date .= ' 00:00:00';
+  $date .= ' 00:00:01';
   $date2 = date("Y-m-d", strtotime("+1 month", strtotime($date))) . ' 23:59:59';
   
   $inner = new EntityFieldQuery();
