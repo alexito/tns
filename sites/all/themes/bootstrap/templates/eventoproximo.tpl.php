@@ -1,4 +1,17 @@
-<h3 class="no-top-margin no-bottom-margin">Evento:</h3>
+  <?php
+  $i = 1;
+  foreach ($output as $id => $node):
+    ?>
+   <h3 class="no-top-margin no-bottom-margin"><?php print 'En ' . t(date('F', strtotime($node->detalle->fecha_desde))) ?></h3>
+  <?php
+    $i++;
+    if ($i == 2) {
+      break;
+    }
+    ?>
+<?php endforeach; ?>  
+
+
 <div class="container eventoproximo no-padding">
   <?php
   $i = 1;
@@ -6,7 +19,7 @@
     ?>
     <a href="<?php print url('node/' . $node->nid); ?>">
       <div class="col-sm-12 col-xs-6 item item-<?php print $i++; ?>">
-        <div>        
+        <div class="item-varios-img">        
           <img height="100" src="<?php print file_create_url($node->field_imagen_del_evento['und'][0]['uri']); ?>" alt="...">               
         </div>
         <div class="detalles">

@@ -6,8 +6,8 @@
         $('body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping > .view-grouping-header').addClass('col-sm-5 col-md-5');
         $('body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping > .view-grouping-content').addClass('col-sm-7 col-md-7');
         
-
-
+        $('.custom-colorbox.fotos-mini a').addClass('col-md-3 col-sm-4 col-xs-6');
+        $('.view-fotos-y-video .field-content iframe').addClass('col-sm-6');
         // CALENDARIO
         var d = new Date(), day, month, year;
         
@@ -76,7 +76,7 @@
           var prev_month = '<a href="?month=' + (month) + '&amp;year=' + (year) + '" title="' + monthNames[month - 1] + ' ' + (year) + '">' + monthNames[month - 1] + ' ' + (year) + '</a>';
         }
 
-        table += ('<div><span class="m-back" data-month="' + p_month + '"> < </span><span class="m-next" data-month="' + n_month + '"> > </span></div>');
+        table += ('<div><span class="m-back" data-month="' + p_month + '"> <i class="fa fa-chevron-circle-left"></i> </span><span class="m-next" data-month="' + n_month + '"> <i class="fa fa-chevron-circle-right"></i>  </span></div>');
 
         table += ('<h3 id="current-month">' + monthNames[month] + ' ' + year + '</h3>');
 
@@ -120,7 +120,10 @@
                 table += ('<td class="other-month"><span class="day"></span></td>');
               } else {
                 if ((j - firstDay + 1) == opts.day) {
-                  today = 'today';
+                  d = new Date();
+                  if (d.getMonth() == month && d.getFullYear() == year) {
+                    today = 'today';
+                  }
                 }
                 cmonth = (month+1);
                 if(cmonth < 10){
@@ -171,7 +174,11 @@
 
             var d = new Date();
             $(".m-next, .m-back").click(function(e){
-              info = $(e.target).attr('data-month').split('-');
+              md = $(e.target).attr('data-month');
+              if (md == undefined){
+                md = $(e.target).parent().attr('data-month')
+              }
+              info = md.split('-');
               $("#calendar").html('');
               $("#calendar").calendarWidget({
                 day: d.getDate(),

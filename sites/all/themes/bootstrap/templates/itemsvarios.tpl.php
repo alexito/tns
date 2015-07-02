@@ -10,11 +10,12 @@
     ?>
     <a href="<?php print url('node/' . $node->nid); ?>">
       <div class="col-sm-3 col-xs-6 item item-<?php print $i++; ?>">
-        <div>        
+        <div class="item-varios-img">        
           <img height="120" src="<?php print file_create_url($node->field_imagen_del_evento['und'][0]['uri']); ?>" alt="...">               
         </div>
         <div class="detalles">
-          <p class="evento-nombre"><?php print $node->title; ?></p>
+
+          <p class="evento-nombre"><?php print (strlen($node->title) > 40) ? substr($node->title, 0, 40) . '...' : $node->title; ?></p>
           <p class="evento-fecha"><b><?php print date('M d · H\hi', strtotime($node->detalle->fecha_desde)) ?></b></p>
           <p class="evento-escenario"><?php print $node->detalle->escenario->title->value(); ?></p>
         </div>
@@ -26,7 +27,7 @@
     }
     ?>
 <?php endforeach; ?>
-  <a href="#">
+  <a href="/imagenes">
     <div class="col-sm-3 col-xs-6 item">
       <i class="fa fa-camera"></i>
       <div class="detalles">
@@ -34,7 +35,7 @@
       </div>
     </div>
   </a>
-  <a href="#">
+  <a href="/videos">
     <div class="col-sm-3 col-xs-6 item">
       <i class="fa fa-video-camera"></i>
       <div class="detalles">

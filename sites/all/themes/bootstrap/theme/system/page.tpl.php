@@ -9,13 +9,14 @@
       <?php endif; ?>
 
       <div class="container custom-header-buttons col-sm-8 pull-right hidden-xs">
-        <div class="col-sm-1 pull-right"><a href="#"><div class="custom-img-link cafeteatro"></div></a></div> 
-        <div class="col-sm-1 pull-right"><a href="#"><div class="custom-img-link casafundacion"></div></a></div>
-        <div class="col-sm-1 pull-right"><a href="#"><div class="custom-img-link plaza"></div></a></div>
-        <div class="col-sm-1 pull-right"><a href="#"><div class="custom-img-link ccmc"></div></a></div>
-        <div class="col-sm-1 pull-right"><a href="#"><div class="custom-img-link variedades"></div></a></div>
-        <div class="col-sm-1 pull-right"><a href="#"><div class="custom-img-link mexico"></div></a></div>
-        <div class="col-sm-1 pull-right"><a href="#"><div class="custom-img-link teatrosucre"></div></a></div>
+        <?php 
+        $view = views_get_view('teatro');
+        $view->set_display('panel_pane_6');
+        $view->pre_execute();
+        $view->execute();
+        print $view->render();
+  ?>
+    
       </div>
     </div>
 
@@ -110,18 +111,17 @@
 <?php //print render($page['footer']);    ?>
   <div class="row">
     <div class="col-sm-12">
-      <div class="col-sm-2"><a href="como-llegar">¿Cómo llegar?</a></div>
-      <div class="col-sm-1"><a href="nos-apoyan"> Nos Apoyan</a></div>
-      <div class="col-sm-2"><a href="#"> Convocatorias / Noticias</a></div>
-      <div class="col-sm-2"><a href="#"> Mapa del Sitio</a></div>
-      <div class="col-sm-1"><a href="#"> RSS</a></div>
+      <div class="col-sm-2"><a href="/como-llegar">¿Cómo llegar?</a></div>
+      <div class="col-sm-1"><a href="/nos-apoyan"> Nos Apoyan</a></div>
+      <div class="col-sm-2"><a href="/convocatorias-noticias"> Convocatorias / Noticias</a></div>
+      <div class="col-sm-1"><a href="/eventos-rss" target="_blank"> RSS</a></div>
       <div class="col-sm-1"><a href="#"> Prensa</a></div>
-      <div class="col-sm-1"><a href="#"> Puntos de Venta</a></div>
+      <div class="col-sm-2"><a href="#"> Puntos de Venta</a></div>
       <div class="col-sm-2"><a href="#"> Cuentanos tu opinión</a></div>
     </div>
     <hr><br>
     <div class="col-sm-12 copyright">
-      Todos los derechos reservados © 2014. Fundación Teatro Nacional Sucre
+      Todos los derechos reservados © 2015. Fundación Teatro Nacional Sucre
     </div>
   </div>
 </footer>
