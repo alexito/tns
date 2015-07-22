@@ -12,7 +12,7 @@
 <?php endforeach; ?>  
 
 
-<div class="container eventoproximo no-padding">
+<div class=" eventoproximo ">
   <?php
   $i = 1;
   foreach ($output as $id => $node):

@@ -110,6 +110,12 @@
 <footer class="footer container text-center">
 <?php //print render($page['footer']);    ?>
   <div class="row">
+    <div class="social-btns">
+      <a href="https://www.facebook.com/teatrosucreQ" target="_blank"><div class="social-btn fb"></div></a>
+      <a href="https://twitter.com/TeatroSucreQ" target="_blank"><div class="social-btn tw"></div></a>
+      <a href="http://www.youtube.com/user/TeatroNacionalSucre" target="_blank"><div class="social-btn yt"></div></a>
+      <a href="/eventos-rss" target="_blank"><div class="social-btn rs"></div></a>
+    </div>
     <div class="col-sm-12">
       <div class="col-sm-2"><a href="/como-llegar">¿Cómo llegar?</a></div>
       <div class="col-sm-1"><a href="/nos-apoyan"> Nos Apoyan</a></div>

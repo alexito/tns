@@ -1,37 +1,35 @@
-<hr>
-<div class="itemsvarios container">
+
+<div class="itemsvarios row">
   <?php
-  $i = 1;
   foreach ($output as $id => $node):
-    if($i == 1){
-      $i++;
-      continue;
-    }
     ?>
+    <?php if($node->type != 'patrocinador'){ ?>
     <a href="<?php print url('node/' . $node->nid); ?>">
-      <div class="col-sm-3 col-xs-6 item item-<?php print $i++; ?>">
+    <?php }else{?>
+    <a href="<?php print $node->field_url[LANGUAGE_NONE][0]['value']; ?>" target="blank">
+    <?php }?>
+      <div class="col-sm-3 col-xs-6 item item-<?php print $id; ?>">
         <div class="item-varios-img">        
           <img height="120" src="<?php print file_create_url($node->field_imagen_del_evento['und'][0]['uri']); ?>" alt="...">               
         </div>
         <div class="detalles">
 
+        <?php if($node->type != 'patrocinador'){ ?>
           <p class="evento-nombre"><?php print (strlen($node->title) > 40) ? substr($node->title, 0, 40) . '...' : $node->title; ?></p>
           <p class="evento-fecha"><b><?php print date('M d · H\hi', strtotime($node->detalle->fecha_desde)) ?></b></p>
           <p class="evento-escenario"><?php print $node->detalle->escenario->title->value(); ?></p>
+        <?php }else{?>
+          <p class="evento-nombre centrado"><b><?php print (strlen($node->title) > 40) ? substr($node->title, 0, 40) . '...' : $node->title; ?></b></p>
+        <?php }?>
         </div>
       </div>
     </a>
-    <?php
-    if ($i == 4) {
-      break;
-    }
-    ?>
 <?php endforeach; ?>
   <a href="/imagenes">
     <div class="col-sm-3 col-xs-6 item">
       <i class="fa fa-camera"></i>
       <div class="detalles">
-        <p class="evento-nombre">Galería de Imágenes</p>
+        <p class="evento-nombre centrado">Galería de Imágenes</p>
       </div>
     </div>
   </a>
@@ -39,7 +37,7 @@
     <div class="col-sm-3 col-xs-6 item">
       <i class="fa fa-video-camera"></i>
       <div class="detalles">
-        <p class="evento-nombre">Galería de Videos</p>
+        <p class="evento-nombre centrado">Galería de Videos</p>
       </div>
     </div>
   </a>

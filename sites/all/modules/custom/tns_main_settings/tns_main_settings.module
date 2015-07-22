@@ -200,7 +200,7 @@ function _tns_main_settings_logo_revista(){
 }
 
 function _tns_main_settings_items_varios(){ 
-  $output = _tns_main_settings_get_eventos();  
+  $output = _tns_main_settings_get_eventos_queue();  
   print theme('itemsvarios', array('output' => $output));  
 }
 
@@ -211,6 +211,45 @@ function _tns_main_settings_evento_proximo(){
 
 function _tns_main_settings_fotos_mini($data){ 
   print theme('fotos_mini', array('output' => $data->field_field_fotos));  
+}
+
+function _tns_main_settings_get_eventos_queue(){
+  $result = db_select('nodequeue_nodes', 'n')
+    ->fields('n', array('nid'))
+    ->condition('qid', 1)
+    ->orderBy('position', 'ASC')
+    ->execute()
+    ->fetchAll();
+
+  $show_nodes = array();
+
+  foreach ($result as $res) {
+
+    $node = node_load($res->nid);
+    if($node->type !== 'patrocinador'){
+      $wnode = entity_metadata_wrapper('node', $node);
+
+      $fc = $wnode->field_informacion->value();
+      
+      $wrapper = entity_metadata_wrapper('field_collection_item', $fc[0]);
+      $f_fecha = $wrapper->field_fecha->value();
+      $fecha = $f_fecha['value'];
+
+      $escenario = ($wrapper->field_pertenece_al_tns->value()) ? $wrapper->field_escenario->value() : $wrapper->field_escenario_externo->value();
+      $detalles = new stdClass();
+      $detalles->fecha = $f_fecha;
+      $detalles->fecha_desde = $f_fecha['value'];
+      $detalles->fecha_hasta = $f_fecha['value2'];
+      $detalles->escenario = entity_metadata_wrapper('node', $escenario);
+      
+      $show_nodes[$res->nid] = $node;
+      $show_nodes[$res->nid]->detalle = $detalles;
+    }else{
+      $show_nodes[$res->nid] = $node;
+    }
+    
+  }
+  return $show_nodes;
 }
 /**
  * Implement hook_init

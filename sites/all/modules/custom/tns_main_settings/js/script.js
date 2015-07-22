@@ -2,6 +2,14 @@
   Drupal.behaviors.tns_main_settings = {
     attach: function (context, settings) {
       $(window).load(function () {
+        // Titles not to be visible
+        console.log($('#pagina-teatros').length);
+        if($('#pagina-teatros').length > 0){
+          $('h1.page-header').hide();
+        }
+        //Main page Carrousel row
+        $('body.page-inicio .main-container #block-system-main .bootstrap-twocol-stacked .row').first().remove();
+        $('body.page-inicio .main-container #block-system-main .bootstrap-twocol-stacked .row').first().addClass('row-carrousel');
         // AGENDA ELENCOS
         $('body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping > .view-grouping-header').addClass('col-sm-5 col-md-5');
         $('body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping > .view-grouping-content').addClass('col-sm-7 col-md-7');
