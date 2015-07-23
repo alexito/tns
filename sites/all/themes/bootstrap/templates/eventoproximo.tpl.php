@@ -19,7 +19,7 @@
     ?>
     <a href="<?php print url('node/' . $node->nid); ?>">
       <div class="col-sm-12 col-xs-6 item item-<?php print $i++; ?>">
-        <div class="item-varios-img">        
+        <div class="item-proximo-img">        
           <img height="100" src="<?php print file_create_url($node->field_imagen_del_evento['und'][0]['uri']); ?>" alt="...">               
         </div>
         <div class="detalles">

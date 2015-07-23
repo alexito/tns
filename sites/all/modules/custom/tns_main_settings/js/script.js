@@ -2,11 +2,7 @@
   Drupal.behaviors.tns_main_settings = {
     attach: function (context, settings) {
       $(window).load(function () {
-        // Titles not to be visible
-        console.log($('#pagina-teatros').length);
-        if($('#pagina-teatros').length > 0){
-          $('h1.page-header').hide();
-        }
+        
         //Main page Carrousel row
         $('body.page-inicio .main-container #block-system-main .bootstrap-twocol-stacked .row').first().remove();
         $('body.page-inicio .main-container #block-system-main .bootstrap-twocol-stacked .row').first().addClass('row-carrousel');
@@ -16,6 +12,7 @@
         
         $('.custom-colorbox.fotos-mini a').addClass('col-md-3 col-sm-4 col-xs-6');
         $('.view-fotos-y-video .field-content iframe').addClass('col-sm-6');
+        $('body .main-container').fadeIn(800);
         // CALENDARIO
         var d = new Date(), day, month, year;
         
