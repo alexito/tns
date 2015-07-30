@@ -5,7 +5,7 @@ body .main-container{
 }
 *.views-field-title,
 *.page-header {
-  color: #ed3e49;
+  color: #C41230;
 }
 *.field-content p{
   text-align: justify;
@@ -21,6 +21,7 @@ body .main-container{
 header .navbar-btn {
   margin-top: 40px;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 header#navbar {
   margin-top: 0px;
@@ -37,6 +38,7 @@ header#navbar {
 body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-vertical.admin-sw .navbar {
     margin-left: 0;
 }
+.page-node.node-type-revista h1.page-header,
 .page-escenarios h1.page-header,
 .page-inicio h1.page-header{
   display: none;
@@ -61,11 +63,27 @@ body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-v
 .navbar-default .view-teatro .view-content .views-row .views-field-field-logo img{
   width: auto;
   height: auto;
-  max-height: 30px;
+  max-height: 35px;
+  filter: grayscale(100%); /* Current draft standard */
+  -webkit-filter: grayscale(100%); /* New WebKit */
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%); 
+  -o-filter: grayscale(100%);
+  filter: gray; /* IE6+ */
+  opacity: 0.7;
+}
+.navbar-default .view-teatro .view-content .views-row .views-field-field-logo img:hover{
+  filter: grayscale(0%); /* Current draft standard */
+  -webkit-filter: grayscale(0%); /* New WebKit */
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%); 
+  -o-filter: grayscale(0%);
+  filter: none; /* IE6+ */
+  opacity: 1;
 }
 footer.footer{
   width: 100% !important;
-  background: url('../img/img-footer.jpg');
+  background: url('../img/img-footer.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -77,7 +95,7 @@ footer.footer{
 
 .sharethis-wrapper{
   float: right;
-  margin-top: -3px;
+  margin-top: -25px;
   margin-right: 7px;
 }
 
@@ -109,7 +127,7 @@ footer.footer{
   max-width: 700px;
 }
 .custom-header-buttons{
-  top: 140px
+  top: 100px
 }
 .custom-header-buttons .custom-img-link{
   height: 36px;
@@ -122,7 +140,7 @@ footer.footer{
   margin-left: 2%;
   text-align: center;
   font-size: 20px;
-  color: #ed3e49;
+  color: #C41230;
 }
 .page-como-llegar .view-escenarios-del-tns .col-sm-6{
   min-height: 350px;
@@ -194,7 +212,7 @@ footer.footer{
   }
 }
 .container.custom-first-part{
-  border-bottom: 3px solid #ed3e49;
+  border-bottom: 3px solid #C41230;
 }
 .navbar-default .navbar-nav > .active > a{
   font-weight: 700;
@@ -210,12 +228,13 @@ footer.footer{
 #calendar table{
   width: 98%;
   margin-left: 3%;
+  color: #000000;
 }
 #calendar table td.current-month{
   
 }
 #calendar table td.current-month.today{
-  color: #ed3e49;
+  color: #C41230;
   font-weight: 700;
 }
 #calendar table td.other-month{
@@ -233,6 +252,10 @@ footer.footer{
 }
 #calendar i{
   font-size: 18px;
+}
+#calendar a, #calendar a:hover, #calendar a:focus{
+  color: #707070;
+  text-decoration: none;
 }
 .logorevista{
   background-image: url('../img/img-logo-revista.jpg');
@@ -296,6 +319,18 @@ footer.footer{
     margin: 20px auto;
     line-height: 1.5;
     max-width: 480px;
+}
+.home-slider .slider-title a, .home-slider .slider-title a:hover, .home-slider .slider-title a:focus{
+  color: #C41230;
+}
+.home-slider .slider-escenario{
+  color: #000000;
+}
+.home-slider .slider-direccion{
+  color: #A2958A;
+}
+.home-slider .slider-descripcion{
+  color: #707070;
 }
 .eventoproximo .detalles{
   background-color: #333333;
@@ -372,7 +407,7 @@ footer.footer{
   margin-top: -20px;
 }
 span.marker{
-  color: #ed3e49;
+  color: #C41230;
   font-size: 10px;
   font-weight: 700;
 }
@@ -396,19 +431,19 @@ span.marker{
   display: block;
 }
 .yes-event span{
-  background-color: #449d44;
+  background-color: #A2958A;
   border-radius: 50%;
   padding: 2px;
 }
-.today span a,
-.yes-event span a{
+#calendar .today span a,
+#calendar .yes-event span a{
   color: #fff;
 }
 .expired.yes-event span{
-  background-color: #ec971f;
+  background-color: #707070;
 }
 .today span{
-  background-color: #31b0d5;
+  background-color: #C41230;
   border-radius: 50%;
   padding: 2px;
 }
@@ -572,6 +607,9 @@ body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping  > 
   height: auto;
   min-height: 120px;
 }
+.eventoproximo img{
+  height: auto; 
+}
 .itemsvarios .detalles p.centrado{
   padding: 15px 10px;
 }
@@ -627,12 +665,46 @@ footer .social-btns .social-btn.rs{
   margin: 10px 0;
 }
 
+form-builder-wrapper.with-palette #form-builder {
+  float: none;
+  margin-right: 0;
+  padding-right: 9px;
+  border-right: 1px solid #CCC;
+  position: relative;
+}
+#form-builder-wrapper.with-palette #form-builder-fields {
+    float: left;
+    padding-left: 10px;
+    width: 20%;
+}
+.page-survey #form-builder-wrapper.no-palette #form-builder, .page-survey #form-builder-wrapper.with-palette #form-builder {
+  position: relative;
+  min-height: 200px;
+  padding-bottom: 30px;
+  margin: 0;
+  border: none;
+  display: inline-block;
+  width: 75%;
+  vertical-align: top;
+}
+.page-node.node-type-revista .views-field.views-field-field-codigo-issuu{
+  overflow: hidden;
+  height: 455px;
+}
+.page-node.node-type-revista .views-field.views-field-field-codigo-issuu .field-content{
+  min-height: 500px;
+  height: 500px;
+}
+.page-node.node-type-revista .views-field.views-field-field-codigo-issuu .field-content .issuuembed{
+  width: 100%;
+  height: 100%;
+}
 
-
-
-
-
-
+.page-nos-apoyan .view-id-patrocinadores.view-display-id-panel_pane_1 > .view-content > .views-row{
+  min-height: 180px;
+  height: 180px;
+  margin-bottom: 10px;
+}
 
 
 

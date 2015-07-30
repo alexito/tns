@@ -6189,13 +6189,13 @@ Last change:    14/08/2014
 /*** Change the 2 values below to create new color schemes ***/
 /*** Color Helpers ***/
 .text-theme-primary {
-  color: #ed3e49;
+  color: #C41230;
 }
 .text-theme-secondary {
   color: #2babcf;
 }
 .bg-theme-primary {
-  background: #ed3e49;
+  background: #C41230;
 }
 .bg-theme-secondary {
   background: #2babcf;
@@ -6378,12 +6378,12 @@ Last change:    14/08/2014
 }
 /*** Button Colors ***/
 .btn-theme-primary {
-  background: #ed3e49;
-  background-image: -webkit-linear-gradient(top, #f05f68 0%, #ed3e49 100%);
-  background-image: -o-linear-gradient(top, #f05f68 0%, #ed3e49 100%);
-  background-image: linear-gradient(to bottom, #f05f68 0%, #ed3e49 100%);
+  background: #C41230;
+  background-image: -webkit-linear-gradient(top, #f05f68 0%, #C41230 100%);
+  background-image: -o-linear-gradient(top, #f05f68 0%, #C41230 100%);
+  background-image: linear-gradient(to bottom, #f05f68 0%, #C41230 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff05f68', endColorstr='#ffed3e49', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff05f68', endColorstr='#ffC41230', GradientType=0);
   border-color: #e31522;
   color: #ffffff;
 }
@@ -6391,7 +6391,7 @@ Last change:    14/08/2014
 .btn-theme-primaryfocus,
 .btn-theme-primary:active {
   border-color: #cc131f;
-  background: #ed3e49;
+  background: #C41230;
   background-image: none;
   color: #ffffff;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -6519,7 +6519,7 @@ Last change:    14/08/2014
     height: 0;
     left: 0;
     width: 100%;
-    /*border-top: 3px solid #ed3e49;
+    /*border-top: 3px solid #C41230;
     top: -3px;
     -webkit-transition: top 100ms;
     -o-transition: top 100ms;
@@ -6534,7 +6534,7 @@ Last change:    14/08/2014
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
     font-weight: 600;
-    border-bottom: 3px solid #ed3e49;
+    border-bottom: 3px solid #C41230;
   }
   .navbar-default .navbar-nav > .active > a:before,
   .navbar-default .navbar-nav > .active > a:hover:before,
@@ -6684,7 +6684,7 @@ Last change:    14/08/2014
   line-height: 30px;
 }
 .progress-bar-theme-primary {
-  background-color: #ed3e49;
+  background-color: #C41230;
 }
 .progress-bar-theme-secondary {
   background-color: #2babcf;
@@ -6695,7 +6695,7 @@ Last change:    14/08/2014
 }
 /*** Panel Colors ***/
 .panel-theme-primary {
-  border-color: #ed3e49;
+  border-color: #C41230;
 }
 .panel-theme-primary > .panel-heading {
   color: #ffffff;
@@ -7092,7 +7092,7 @@ body {
   padding-top: 80px;
 }
 .home-slider h3 {
-  color: #ed3e49;
+  color: #C41230;
 }
 .home-slider p {
   margin: 20px 0;
@@ -7192,7 +7192,7 @@ body {
   background-size: cover;
 }
 .fullscreen h3 {
-  color: #ed3e49;
+  color: #C41230;
 }
 .fullscreen p {
   margin: 35px 0;
@@ -7220,7 +7220,7 @@ body {
 /* ===== Home Services ===== */
 .home-services {
   margin-bottom: 20px;
-  background: #ed3e49;
+  background: #C41230;
   color: white;
 }
 .home-services .lead {
@@ -7732,7 +7732,7 @@ body {
   text-align: center;
   display: block;
   margin-right: 15px;
-  background: #ed3e49;
+  background: #C41230;
   color: white;
   float: left;
   -webkit-transition: all 300ms;
@@ -7788,7 +7788,7 @@ body {
   content: "\f0a3";
   font-family: FontAwesome;
   font-size: 30px;
-  color: #ed3e49;
+  color: #C41230;
 }
 .shop-product.featured:after {
   position: absolute;
@@ -8126,7 +8126,7 @@ body {
             } */
 }
 .timeline > .event:hover h3 {
-  color: #ed3e49;
+  color: #C41230;
 }
 .timeline > .event .event__title {
   position: relative;
@@ -8462,7 +8462,7 @@ body {
   content: "+";
 }
 .rating .down {
-  color: #ed3e49;
+  color: #C41230;
 }
 .rating .down:before {
   content: "-";

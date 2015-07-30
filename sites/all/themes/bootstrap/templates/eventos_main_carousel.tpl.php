@@ -27,23 +27,23 @@ foreach ($nodes as $id => $node):
             <div class="row">
               <div class="col-sm-4 col-lg-3">
                 <div class="home-slider__content">
-                  <h1 class="first-child animated slideInDown delay-2 hidden-sm hidden-md hidden-lg"><?php
+                  <h1 class="first-child animated slideInDown delay-2 hidden-sm hidden-md hidden-lg slider-title"><?php
                   print l((strlen($node->title) > 60) ? substr($node->title, 0, 60) . '...' : $node->title, 'node/' . $node->nid);
                   ?></h1>
-                  <h1 class="first-child animated slideInDown delay-2 hidden-xs"><?php
+                  <h1 class="first-child animated slideInDown delay-2 hidden-xs slider-title"><?php
                   print l((strlen($node->title) > 30) ? substr($node->title, 0, 30) . '...' : $node->title, 'node/' . $node->nid);
                   ?></h1>
-                  <h3 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->title->value(); ?></h3>
-                  <h5 class="animated slideInDown delay-3"><?php print $node->detalle->escenario->field_ubicacion->value(); ?></h5>
+                  <h3 class="animated slideInDown delay-3 slider-escenario"><?php print $node->detalle->escenario->title->value(); ?></h3>
+                  <h5 class="animated slideInDown delay-3 slider-direccion"><?php print $node->detalle->escenario->field_ubicacion->value(); ?></h5>
                     <?php
                     $detalle_evento = strip_tags($node->body[LANGUAGE_NONE][0]['value']);
                     ?>
-                  <p class="text-muted animated slideInLeft delay-4 hidden-sm hidden-md hidden-lg">
+                  <p class="text-muted animated slideInLeft delay-4 hidden-sm hidden-md hidden-lg slider-descripcion">
                     <?php
                     print (strlen($detalle_evento) > 300) ? substr($detalle_evento, 0, 300) . '...' : $detalle_evento;
                     ?>
                   </p>
-                  <p class="text-muted animated slideInLeft delay-4 hidden-xs">
+                  <p class="text-muted animated slideInLeft delay-4 hidden-xs slider-descripcion">
                     <?php
                     print (strlen($detalle_evento) > 150) ? substr($detalle_evento, 0, 150) . '...' : $detalle_evento;
                     ?>

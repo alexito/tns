@@ -20,13 +20,7 @@
       </div>
     </div>
 
-
-
-
   </div>
-
-
-
   <div class="container">
     <div class="navbar-header">
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
@@ -121,8 +115,8 @@
       <div class="col-sm-1"><a href="/nos-apoyan"> Nos Apoyan</a></div>
       <div class="col-sm-2"><a href="/convocatorias-noticias"> Convocatorias / Noticias</a></div>
       <div class="col-sm-1"><a href="/eventos-rss" target="_blank"> RSS</a></div>
-      <div class="col-sm-1"><a href="#"> Prensa</a></div>
-      <div class="col-sm-2"><a href="#"> Puntos de Venta</a></div>
+      <div class="col-sm-1"><a href="/prensa"> Prensa</a></div>
+      <div class="col-sm-2"><a href="/puntos-de-venta"> Puntos de Venta</a></div>
       <div class="col-sm-2"><a href="#"> Cuentanos tu opinión</a></div>
     </div>
     <hr><br>
