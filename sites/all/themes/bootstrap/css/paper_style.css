@@ -2432,7 +2432,7 @@ input[type="month"].input-lg {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-left: -20px;
+  margin-left: 0px;
   margin-top: 4px \9;
 }
 .radio + .radio,
@@ -7071,12 +7071,13 @@ body {
   /* margin-top: -30px; */
 }
 .home-slider .carousel-inner > .item {
-  height: 500px;
+  height: 560px;
   overflow: hidden;
   background-color: #f6f6f6;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover !important;
+  margin-bottom: 10px;
 }
 .home-slider .carousel-inner > .item .bg-img {
   position: absolute;

@@ -1,6 +1,5 @@
 body.page-presentacion-propuestas #propuesta-node-form #edit-field-archivo .input-group-btn,
-body.bootstrap-anchors-processed .filter-wrapper,
-body .main-container{
+body.bootstrap-anchors-processed .filter-wrapper{
   display: none;
 }
 *.views-field-title,
@@ -34,6 +33,9 @@ header#navbar {
 }
 .page-node-add .tabbable.tabs-left.vertical-tabs.bootstrap-tabs-processed{
   display: none;
+}
+.pane-block.pane-search-form{
+  margin-bottom: 10px;
 }
 body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-vertical.admin-sw .navbar {
     margin-left: 0;
@@ -311,7 +313,7 @@ footer.footer{
   margin-bottom: 10px;
 }
 .row-carrousel{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -664,28 +666,13 @@ footer .social-btns .social-btn.rs{
 .revista-logo, .proximo-evento-mini{
   margin: 10px 0;
 }
-
-form-builder-wrapper.with-palette #form-builder {
-  float: none;
-  margin-right: 0;
-  padding-right: 9px;
-  border-right: 1px solid #CCC;
-  position: relative;
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: -15px;
+  max-width: 400px;
 }
-#form-builder-wrapper.with-palette #form-builder-fields {
-    float: left;
-    padding-left: 10px;
-    width: 20%;
-}
-.page-survey #form-builder-wrapper.no-palette #form-builder, .page-survey #form-builder-wrapper.with-palette #form-builder {
-  position: relative;
-  min-height: 200px;
-  padding-bottom: 30px;
-  margin: 0;
-  border: none;
-  display: inline-block;
-  width: 75%;
-  vertical-align: top;
+.form-item.webform-component, .webform-submit{
+  margin: 25px auto;
 }
 .page-node.node-type-revista .views-field.views-field-field-codigo-issuu{
   overflow: hidden;

@@ -30,7 +30,8 @@
               <?php print render($primary_nav); ?>
             <?php endif; ?>
             <?php if (!empty($secondary_nav)): ?>
-              <?php //print render($secondary_nav); ?>
+              <?php //print render($secondary_nav);
+              ?>
             <?php endif; ?>
             <?php if (!empty($page['navigation'])): ?>
               <?php print render($page['navigation']); ?>
@@ -113,11 +114,12 @@
     <div class="col-sm-12">
       <div class="col-sm-2"><a href="/como-llegar">¿Cómo llegar?</a></div>
       <div class="col-sm-1"><a href="/nos-apoyan"> Nos Apoyan</a></div>
-      <div class="col-sm-2"><a href="/convocatorias-noticias"> Convocatorias / Noticias</a></div>
+      <div class="col-sm-2"><a href="/convocatorias-noticias"> Convocatorias<br>Noticias</a></div>
+      <div class="col-sm-1"><a href="/mapa-del-sitio" target="_blank"> Mapa del<br> Sitio</a></div>
       <div class="col-sm-1"><a href="/eventos-rss" target="_blank"> RSS</a></div>
       <div class="col-sm-1"><a href="/prensa"> Prensa</a></div>
       <div class="col-sm-2"><a href="/puntos-de-venta"> Puntos de Venta</a></div>
-      <div class="col-sm-2"><a href="#"> Cuentanos tu opinión</a></div>
+      <div class="col-sm-2"><a href="/encuestas"> Cuentanos tu opinión</a></div>
     </div>
     <hr><br>
     <div class="col-sm-12 copyright">

@@ -12,7 +12,7 @@
         
         $('.custom-colorbox.fotos-mini a').addClass('col-md-3 col-sm-4 col-xs-6');
         $('.view-fotos-y-video .field-content iframe').addClass('col-sm-6');
-        $('body .main-container').fadeIn(800);
+        //$('body .main-container').fadeIn(800);
         // CALENDARIO
         var d = new Date(), day, month, year;
         
