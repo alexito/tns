@@ -226,7 +226,7 @@ function _tns_main_settings_get_eventos_queue(){
   foreach ($result as $res) {
 
     $node = node_load($res->nid);
-    if($node->type !== 'patrocinador' && $node->type !== 'convocatorias_noticias'){
+    if($node->type !== 'patrocinador' && $node->type !== 'convocatorias_noticias' && $node->type !== 'fotos_y_videos'){
       $wnode = entity_metadata_wrapper('node', $node);
 
       $fc = $wnode->field_informacion->value();

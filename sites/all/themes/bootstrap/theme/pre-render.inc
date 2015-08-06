@@ -59,3 +59,21 @@ function _bootstrap_pre_render_fieldset($element) {
 
   return $element;
 }
+
+/**
+* Implement hook_file_formater_table
+*/
+function bootstrap_file_formatter_table($variables) {
+  $header = array(t('Attachment'), t('Size'), t('Date'));
+  $rows = array();
+  foreach ($variables['items'] as $delta => $item) {
+    $XXCUSTOMfilesize = $item['filesize'];
+    $rows[] = array(
+      theme('file_link', array('file' => (object) $item)),
+      //format_size($item['filesize']);
+      format_size(round($XXCUSTOMfilesize)), // removes decimals;see PHP round for options
+      format_date($item['timestamp'], $type = 'custom', 'd-M-Y'),
+    );
+  }
+  return empty($rows) ? '' : theme('table', array('header' => $header, 'rows' => $rows));
+}

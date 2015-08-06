@@ -6,6 +6,7 @@ body.bootstrap-anchors-processed .filter-wrapper{
 *.page-header {
   color: #C41230;
 }
+p.field-content,
 *.field-content p{
   text-align: justify;
 }
@@ -23,8 +24,11 @@ header .navbar-btn {
   margin-left: 20px;
 }
 header#navbar {
-  margin-top: 0px;
+  margin-top: 25px;
   margin-bottom: 40px;
+}
+header#navbar nav{
+  text-align: center;
 }
 #admin-toolbar *{
   -webkit-box-sizing: content-box;
@@ -45,11 +49,13 @@ body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-v
 .page-inicio h1.page-header{
   display: none;
 }
-.navbar-default .view-teatro .view-content .views-row{
+.navbar-default .view-teatro .view-content .views-row {
   float: right;
-  padding: 0 3px;
-  border-left: 1px solid #e8e8e8;
+  padding: 0 6px;
   border-right: 1px solid #e8e8e8;
+}
+.navbar-default .view-teatro .view-content .views-row.views-row-last {
+  border-left: 1px solid #e8e8e8;
 }
 .view-id-teatro .views-field-field-gmap .field-content{
   overflow: hidden;
@@ -64,8 +70,8 @@ body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-v
 }
 .navbar-default .view-teatro .view-content .views-row .views-field-field-logo img{
   width: auto;
-  height: auto;
-  max-height: 35px;
+  height: 44px;
+  max-height: 44px;
   filter: grayscale(100%); /* Current draft standard */
   -webkit-filter: grayscale(100%); /* New WebKit */
   -moz-filter: grayscale(100%);
@@ -129,7 +135,7 @@ footer.footer{
   max-width: 700px;
 }
 .custom-header-buttons{
-  top: 100px
+  top: 90px
 }
 .custom-header-buttons .custom-img-link{
   height: 36px;
@@ -145,10 +151,23 @@ footer.footer{
   color: #C41230;
 }
 .page-como-llegar .view-escenarios-del-tns .col-sm-6{
-  min-height: 350px;
+  min-height: 440px;
+
+  border-bottom: 1px solid #ddd;
 }
 .page-como-llegar .view-escenarios-del-tns .col-sm-6 strong{
   height: 45px;
+}
+.page-como-llegar .view-escenarios-del-tns .views-field-title{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.page-como-llegar .view-escenarios-del-tns .views-field-title,
+.page-como-llegar .view-escenarios-del-tns .views-field-field-logo{
+  text-align: center;
+}
+.page-como-llegar .view-escenarios-del-tns iframe{
+  margin: 25px 0;
 }
 .custom-header-buttons .custom-img-link.teatrosucre{
   background-image: url('../img/btn_teatrosucre_off.png');
@@ -200,17 +219,61 @@ footer.footer{
 }
 .navbar-default .navbar-nav > li > a {
   text-align: center;
-  height: 55px;
+  height: 50px;
   padding: 5px 10px;
 }
+ul li.leaf {
+  margin: 0 5px;
+}
+
 @media (min-width: 768px){
+  .custom-header-buttons.col-sm-10 {
+    width: 83.33333333%;
+    position: absolute;
+    float: none!important;
+    right: 0;
+  }
+
+  .navbar-default .navbar-nav{
+    font-size: 12px;
+    display: inline-block;
+  }
   .navbar-default .navbar-nav > li > a{
-    max-width: 140px;
+    max-width: 125px;
+    width: 125px;
   }  
+  .navbar-default .navbar-nav > li:nth-child(1) > a{
+    width: 67px;
+  }
+  .navbar-default .navbar-nav > li:nth-child(8) > a,
+  .navbar-default .navbar-nav > li:nth-child(5) > a,
+  .navbar-default .navbar-nav > li:nth-child(2) > a{
+    width: 85px;
+  }
+  .navbar-default .navbar-nav > li:nth-child(4) > a,
+  .navbar-default .navbar-nav > li:nth-child(6) > a{
+    width: 110px;
+  }
+  .navbar-default .navbar-nav > li:nth-child(7) > a{
+    width: 115px;
+  }
 }
 @media (min-width: 768px){
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
     padding-top: 7px;
+  }
+}
+
+@media (max-width: 767px){
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333333;
+    background-color: transparent;
+    text-align: center;
+  }
+}
+@media (max-width: 767px){
+  .navbar-nav .open .dropdown-menu > li > a {
+    text-align: center;
   }
 }
 .container.custom-first-part{
@@ -260,9 +323,10 @@ footer.footer{
   text-decoration: none;
 }
 .logorevista{
-  background-image: url('../img/img-logo-revista.jpg');
+  background-image: url('../img/img-logo-revista.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: auto;
   height: 115px;
   display: block;
@@ -281,7 +345,8 @@ footer.footer{
 @media (min-width: 768px){
   .revista-logo,
   .proximo-evento-mini {
-    padding: 0;
+    padding-left: 0!important;
+    padding-right: 0!important;
   }
 }
 
@@ -333,6 +398,10 @@ footer.footer{
 }
 .home-slider .slider-descripcion{
   color: #707070;
+}
+.home-slider .item{
+  background-image: url(../img/image-2.png);
+  background-position: bottom center;
 }
 .eventoproximo .detalles{
   background-color: #333333;
@@ -401,6 +470,7 @@ footer.footer{
 .img-encabezado img{
   width: 100%;
   height: auto;
+  margin-bottom: 25px;
 }
 .views-field-field-imagen-del-evento img{
   max-width: 600px;
@@ -516,6 +586,7 @@ span.marker{
 .views-field-field-imagen-encabezado img{
   height: auto;
   width: 100%;
+  margin-bottom: 25px;
 }
 .view-id-teatro.view-display-id-panel_pane_5 .view-content .views-row{
   min-height: 200px;
@@ -634,12 +705,13 @@ body.page-agenda-elencos .view-agenda-elencos .view-content > .view-grouping  > 
 .page-node.node-type-convocatorias-noticias .views-field-body{
   margin-top: 20px;
 }
-footer .social-btns{
+header .social-btns{
   text-align: right;
   right: 20px;
-  margin-top: -30px;
+  position: absolute;
+  top: 10px;
 }
-footer .social-btns .social-btn{
+header .social-btns .social-btn{
   width: 18px;
   height: 18px;
   background-size: contain;
@@ -648,19 +720,19 @@ footer .social-btns .social-btn{
   display: inline-block;
   margin-right: 5px;
 }
-footer .social-btns .social-btn:hover{
+header .social-btns .social-btn:hover{
   opacity: 0.75;
 }
-footer .social-btns .social-btn.fb{
+header .social-btns .social-btn.fb{
   background-image: url('../img/btn_fb.png');
 }
-footer .social-btns .social-btn.tw{
+header .social-btns .social-btn.tw{
   background-image: url('../img/btn_tw.png');
 }
-footer .social-btns .social-btn.yt{
+header .social-btns .social-btn.yt{
   background-image: url('../img/btn_yt.png');
 }
-footer .social-btns .social-btn.rs{
+header .social-btns .social-btn.rs{
   background-image: url('../img/btn_rs.png');
 }
 .revista-logo, .proximo-evento-mini{
@@ -693,5 +765,79 @@ footer .social-btns .social-btn.rs{
   margin-bottom: 10px;
 }
 
+.node-type-informacion-publica .view-id-informacion_publica.view-display-id-panel_pane_2 .view-content > h3{
+  font-size: 15px;
+  text-align: justify;
+}
 
+.views-field-created{
+    font-size: 13px;
+    color: #a1a1a1;
+    margin: 5px 0 10px 0;
+}
+.view-id-informacion_publica.view-display-id-panel_pane_2 > .view-content > div{
+  display: inline-block;
+}
+.views-field-field-item > .field-content{
+  margin: 25px 0;
+  border: 1px solid #dddddd;
+}
+body.page-revistas .view-display-id-panel_pane_1 .views-field-nothing-1 img{
+  width: 100%;
+  height: auto;
+}
+body.page-revistas .view-display-id-panel_pane_1 .view-content .views-row.row{
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
+}
+body.page-search .main-container section#block-system-main h3 a,    
+body.page-search .main-container section#block-system-main h2,
+body.page-search .main-container section#block-system-main ol{
+  color: #c41230;
+}
+body.page-search .main-container section#block-system-main ol .search-snippet-info{
+  color: #000000;
+}
+
+#home-slider .carousel-indicators li {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 1px;
+  text-indent: -999px;
+  border: 2px solid #c41230;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: #c41230;
+}
+#home-slider .carousel-indicators .active {
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+}
+.views-field-field-gmap iframe{
+  margin: 20px 0;
+}
+body.page-convocatorias-noticias .view-convocatorias-noticias h4 a {
+  color: #C41230;
+}
+.btn-default {
+  color: #ffffff;
+  background-color: #C41230;
+  border-color: #C41230;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+  color: #ffffff;
+  background-color: #c41230;
+  border-color: #C41230;
+}
+.btn:hover, .btn:focus {
+  color: #ffffff;
+  text-decoration: none;
+}
 

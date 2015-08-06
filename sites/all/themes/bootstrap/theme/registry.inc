@@ -217,3 +217,5 @@ function bootstrap_find_theme_includes($registry, $extension, $path) {
 
   return $hook_includes;
 }
+
+

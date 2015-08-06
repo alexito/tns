@@ -2,13 +2,19 @@
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container custom-first-part">
     <div class="navbar-header">
+    <div class="social-btns">
+      <a href="https://www.facebook.com/teatrosucreQ" target="_blank"><div class="social-btn fb"></div></a>
+      <a href="https://twitter.com/TeatroSucreQ" target="_blank"><div class="social-btn tw"></div></a>
+      <a href="http://www.youtube.com/user/TeatroNacionalSucre" target="_blank"><div class="social-btn yt"></div></a>
+      <a href="/eventos-rss" target="_blank"><div class="social-btn rs"></div></a>
+    </div>
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
 
-      <div class="container custom-header-buttons col-sm-8 pull-right hidden-xs">
+      <div class="container custom-header-buttons col-sm-10 hidden-xs">
         <?php 
         $view = views_get_view('teatro');
         $view->set_display('panel_pane_6');
@@ -105,21 +111,14 @@
 <footer class="footer container text-center">
 <?php //print render($page['footer']);    ?>
   <div class="row">
-    <div class="social-btns">
-      <a href="https://www.facebook.com/teatrosucreQ" target="_blank"><div class="social-btn fb"></div></a>
-      <a href="https://twitter.com/TeatroSucreQ" target="_blank"><div class="social-btn tw"></div></a>
-      <a href="http://www.youtube.com/user/TeatroNacionalSucre" target="_blank"><div class="social-btn yt"></div></a>
-      <a href="/eventos-rss" target="_blank"><div class="social-btn rs"></div></a>
-    </div>
+    
     <div class="col-sm-12">
       <div class="col-sm-2"><a href="/como-llegar">¿Cómo llegar?</a></div>
-      <div class="col-sm-1"><a href="/nos-apoyan"> Nos Apoyan</a></div>
+      <div class="col-sm-2"><a href="/nos-apoyan"> Nos Apoyan</a></div>
       <div class="col-sm-2"><a href="/convocatorias-noticias"> Convocatorias<br>Noticias</a></div>
-      <div class="col-sm-1"><a href="/mapa-del-sitio" target="_blank"> Mapa del<br> Sitio</a></div>
-      <div class="col-sm-1"><a href="/eventos-rss" target="_blank"> RSS</a></div>
-      <div class="col-sm-1"><a href="/prensa"> Prensa</a></div>
-      <div class="col-sm-2"><a href="/puntos-de-venta"> Puntos de Venta</a></div>
-      <div class="col-sm-2"><a href="/encuestas"> Cuentanos tu opinión</a></div>
+      <div class="col-sm-2"><a href="/mapa-del-sitio" > Mapa del Sitio</a></div>
+      <div class="col-sm-2"><a href="/prensa"> Prensa</a></div>
+      <div class="col-sm-2"><a href="/encuestas"> Cuéntanos tu opinión</a></div>
     </div>
     <hr><br>
     <div class="col-sm-12 copyright">
