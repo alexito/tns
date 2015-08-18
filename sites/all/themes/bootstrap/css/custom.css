@@ -18,6 +18,12 @@ p.field-content,
 .navbar.container.navbar-default, .main-container.container{
   max-width: 1030px;
 }
+.main-container.container a{
+  color: #C41230;
+}
+.main-container.container a.btn-theme-primary{
+  color: #ffffff !important;
+}
 header .navbar-btn {
   margin-top: 40px;
   margin-bottom: 20px;
@@ -44,6 +50,7 @@ header#navbar nav{
 body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-vertical.admin-sw .navbar {
     margin-left: 0;
 }
+.page-node.node-type-evento h1.page-header,
 .page-node.node-type-revista h1.page-header,
 .page-escenarios h1.page-header,
 .page-inicio h1.page-header{
@@ -61,9 +68,17 @@ body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-v
   overflow: hidden;
   border-bottom: 1px solid #d3d3d3;
   padding-bottom: 10px;
+  font-weight: 600;
+}
+.view-id-teatro .views-field-field-gmap .field-content p:last-child{
+  font-weight: 400;
 }
 .view-id-teatro .views-field-field-gmap{
   text-align: center;
+}
+.view-id-teatro.view-display-id-panel_pane_4 .views-field-field-gmap{
+  text-align: left;
+  font-weight: 600;
 }
 .view-id-teatro .views-field-field-pdf{
   margin: 10px 0;
@@ -128,11 +143,11 @@ footer.footer{
   background-image: url('../img/img-producciones-propias.jpg');  
 }
 .view-id-varios .views-field-field-imagen-encabezado img{
-  max-height: 140px;
+  max-height: 235px;
   margin-bottom: 20px;
   width: 100%;
   height: auto;
-  max-width: 700px;
+  max-width: 745px;
 }
 .custom-header-buttons{
   top: 90px
@@ -312,7 +327,7 @@ ul li.leaf {
   background-size: 50px;
   background-position: center;
   height: 170px;
-  width: 200px;
+  width: 100%;
   display: block;
 }
 #calendar i{
@@ -462,6 +477,7 @@ ul li.leaf {
 
 .view-id-fotos_y_video.view-display-id-panel_pane_3 .custom-colorbox.fotos-mini img{
   width: 100%;
+  height: auto;
 }
 .view-id-fotos_y_video.view-display-id-panel_pane_3 .custom-colorbox.fotos-mini{
   display: inline-block;
@@ -549,9 +565,13 @@ span.marker{
 }
 .tooltip-inner ul li{
   margin-left: -20px;
+  text-align: left;
 }
 .view-id-eventos.view-display-id-panel_pane_3 .views-field-body{
   margin: 20px 0 30px 0;
+}
+.views-field-body{
+  // text-align: justify;
 }
 
 .view-id-eventos.view-display-id-panel_pane_3 .views-field-field-categoria{
@@ -821,7 +841,7 @@ body.page-search .main-container section#block-system-main ol .search-snippet-in
   background-color: #ffffff;
 }
 .views-field-field-gmap iframe{
-  margin: 20px 0;
+  margin: 20px;
 }
 body.page-convocatorias-noticias .view-convocatorias-noticias h4 a {
   color: #C41230;
@@ -840,4 +860,40 @@ body.page-convocatorias-noticias .view-convocatorias-noticias h4 a {
   color: #ffffff;
   text-decoration: none;
 }
-
+#switch_edit-body-und-0-value{
+  display: none;
+}
+.multimedia-imagen img{
+  width: 100%;
+  height: auto;
+}
+.form-autocomplete .dropdown{
+  width: 100%;
+  display: block;
+}
+.form-autocomplete .dropdown .dropdown-menu{
+  width: 100%;
+  display: block;
+}
+.form-autocomplete .dropdown .dropdown-menu li{
+  max-width: 100%;
+  display: block;
+}
+.item-list.accordion-group{
+  border: 1px solid #c3c3c3;
+  margin-bottom: 10px;
+  display: block;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+.item-list.accordion-group h3{
+  margin-top: 0px;
+  text-align: center;
+  border-bottom: 1px solid #c3c3c3;
+  background-color: #C41230;
+  color: #fff;
+  padding: 4px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}

@@ -2,6 +2,15 @@
   Drupal.behaviors.tns_main_settings = {
     attach: function (context, settings) {
       $(window).load(function () {
+        //Accordion
+        $('.accordion-group').each(function(i, e){
+          $(this).find('h3').click(function(){
+            $(this).parent().find('ul').slideToggle();
+          })
+          if(i > 0) {
+            $(this).find('h3').parent().find('ul').slideToggle();
+          }
+        });
         
         //Main page Carrousel row
         $('body.page-inicio .main-container #block-system-main .bootstrap-twocol-stacked .row').first().remove();

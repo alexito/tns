@@ -6397,18 +6397,18 @@ Last change:    14/08/2014
 }
 .btn-theme-secondary {
   background: #C41230;
-  background-image: -webkit-linear-gradient(top, #45b8d8 0%, #C41230 100%);
-  background-image: -o-linear-gradient(top, #45b8d8 0%, #C41230 100%);
-  background-image: linear-gradient(to bottom, #45b8d8 0%, #C41230 100%);
+  background-image: -webkit-linear-gradient(top, #C41230 0%, #C41230 100%);
+  background-image: -o-linear-gradient(top, #C41230 0%, #C41230 100%);
+  background-image: linear-gradient(to bottom, #C41230 0%, #C41230 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff45b8d8', endColorstr='#ffC41230', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffC41230', endColorstr='#ffC41230', GradientType=0);
   border-color: #2288a5;
   color: #ffffff;
 }
 .btn-theme-secondary:hover,
 .btn-theme-secondaryfocus,
 .btn-theme-secondary:active {
-  border-color: #1e7790;
+  border-color: #C41230;
   background: #C41230;
   background-image: none;
   color: #ffffff;
@@ -6625,11 +6625,11 @@ Last change:    14/08/2014
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  background-image: -webkit-linear-gradient(top, #45b8d8 0%, #C41230 100%);
-  background-image: -o-linear-gradient(top, #45b8d8 0%, #C41230 100%);
-  background-image: linear-gradient(to bottom, #45b8d8 0%, #C41230 100%);
+  background-image: -webkit-linear-gradient(top, #C41230 0%, #C41230 100%);
+  background-image: -o-linear-gradient(top, #C41230 0%, #C41230 100%);
+  background-image: linear-gradient(to bottom, #C41230 0%, #C41230 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff45b8d8', endColorstr='#ffC41230', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffC41230', endColorstr='#ffC41230', GradientType=0);
 }
 /* ===== Pagination ===== */
 .pagination > li > a,
@@ -6644,11 +6644,11 @@ Last change:    14/08/2014
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
   background-color: #C41230;
-  background-image: -webkit-linear-gradient(top, #45b8d8 0%, #C41230 100%);
-  background-image: -o-linear-gradient(top, #45b8d8 0%, #C41230 100%);
-  background-image: linear-gradient(to bottom, #45b8d8 0%, #C41230 100%);
+  background-image: -webkit-linear-gradient(top, #C41230 0%, #C41230 100%);
+  background-image: -o-linear-gradient(top, #C41230 0%, #C41230 100%);
+  background-image: linear-gradient(to bottom, #C41230 0%, #C41230 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff45b8d8', endColorstr='#ffC41230', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffC41230', endColorstr='#ffC41230', GradientType=0);
 }
 /* ===== Tooltips ===== */
 .tooltip-inner {

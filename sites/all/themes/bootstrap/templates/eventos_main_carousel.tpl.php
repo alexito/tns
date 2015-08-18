@@ -1,6 +1,6 @@
 <div class="home-slider">
   <!--<div id="home-slider" class="carousel slide" data-ride="carousel">-->
-  <div id="home-slider" class="carousel slide" data-ride="carousel" data-interval="8000">
+  <div id="home-slider" class="carousel slide" data-ride="carousel" data-interval="10000">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <?php $i = 0;

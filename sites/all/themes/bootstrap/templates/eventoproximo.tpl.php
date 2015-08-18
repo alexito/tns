@@ -26,7 +26,7 @@
           <p class="evento-nombre"><?php print $node->title; ?></p>
           <p class="evento-fecha-escenario">
             <b><?php print date('M d · H\hi', strtotime($node->detalle->fecha_desde)) ?></b>
-            <?php print $node->detalle->escenario->title->value(); ?>
+            <?php print $node->detalle->escenario->title; ?>
           </p>          
         </div>
       </div>
