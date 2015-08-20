@@ -42,7 +42,7 @@ function _tns_main_settings_events_year_month($date) {
   for($i = 1; $i < $days_between; $i++){
     $data->days['_' . $i] = new stdClass();
     $data->days['_' . $i]->count = 0;
-    $data->days['_' . $day]->events = array();
+    $data->days['_' . $i]->events = array();
   }
   
   foreach ($field_collection_items as $item) {

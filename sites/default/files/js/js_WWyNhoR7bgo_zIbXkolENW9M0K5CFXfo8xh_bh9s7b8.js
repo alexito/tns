@@ -4,9 +4,6 @@
       $(window).load(function () {
         //Accordion
         $('.accordion-group').each(function(i, e){
-          $(this).parent().prepend(this);  
-        });
-        $('.accordion-group').each(function(i, e){
           $(this).find('h3').click(function(){
             $(this).parent().find('ul').slideToggle();
           })
@@ -24,7 +21,7 @@
         
         $('.custom-colorbox.fotos-mini a').addClass('col-md-3 col-sm-4 col-xs-6');
         $('.view-fotos-y-video .field-content iframe').addClass('col-sm-6');
-        
+        //$('body .main-container').fadeIn(800);
         // CALENDARIO
         var d = new Date(), day, month, year;
         
@@ -230,9 +227,11 @@
     }
   };
   $(document).ready(function () {
-    $('.main-container').fadeIn(800);
+
   });
 })(jQuery);
 (function ($) {
-  
-})(jQuery);
+  function hola() {
+    console.log('hola')
+  }
+})(jQuery);;
