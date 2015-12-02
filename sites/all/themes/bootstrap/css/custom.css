@@ -786,6 +786,21 @@ header .social-btns .social-btn.rs{
   height: 100%;
 }
 
+.view-id-revistas.view-display-id-panel_pane_1 .view-content .views-row .views-field-field-logo img{
+  max-width: 100%;
+  height: auto;
+}
+.view-id-revistas.view-display-id-panel_pane_1 .view-content .views-row .views-field-field-ip-mes {
+  font-weight: 600;
+}
+.view-id-revistas.view-display-id-panel_pane_1 .view-content .views-row .views-field {
+  padding: 5px;
+}
+
+.view-id-revistas.view-display-id-panel_pane_3 .view-content .views-row {
+  display: none;
+}
+
 .page-nos-apoyan .view-id-patrocinadores.view-display-id-panel_pane_1 > .view-content > .views-row{
   min-height: 180px;
   height: 180px;
@@ -819,6 +834,13 @@ body.page-revistas .view-display-id-panel_pane_1 .view-content .views-row.row{
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #dddddd;
+}
+body.page-revistas #block-system-main .panel-panel.right.col-sm-3{
+  display: inline-block;
+}
+body.page-revistas #block-system-main .view-id-revistas.view-display-id-panel_pane_1 .views-row{
+  margin-bottom: 20px;
+  min-height: 310px;
 }
 body.page-search .main-container section#block-system-main h3 a,    
 body.page-search .main-container section#block-system-main h2,
