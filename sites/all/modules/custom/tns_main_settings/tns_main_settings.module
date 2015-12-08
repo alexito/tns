@@ -131,7 +131,31 @@ function _tns_main_settings_get_eventos(){
 
     $show_nodes = $show_nodes + prepare_results($result);
   }
+  // Limit to 6 items
+  for ($i = count($show_nodes); $i > 6; $i--) {
+    unset($show_nodes[$i]);
+  }
+
+  // Add the Especial content
+  $show_nodes = _tns_main_settings_get_especial_queue() + $show_nodes;
   
+  return $show_nodes;
+}
+
+function _tns_main_settings_get_especial_queue(){
+  $result = db_select('nodequeue_nodes', 'n')
+    ->fields('n', array('nid'))
+    ->condition('qid', 3)
+    ->orderBy('position', 'ASC')
+    ->execute()
+    ->fetchAll();
+
+  $show_nodes = array();
+
+  foreach ($result as $res) {
+    $node = node_load($res->nid);
+    $show_nodes[$node->nid] = $node;
+  }
   return $show_nodes;
 }
 
@@ -215,7 +239,7 @@ function _tns_main_settings_items_varios(){
 }
 
 function _tns_main_settings_evento_proximo(){ 
-  $output = _tns_main_settings_get_eventos();  
+  $output = _tns_main_settings_get_eventos();
   print theme('eventoproximo', array('output' => $output));  
 }
 

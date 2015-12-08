@@ -8,6 +8,3 @@ core = "7.x"
 project = "tns_main_settings"
 
 scripts[] = js/script.js
-
-dependencies[] = media
-dependencies[] = file
