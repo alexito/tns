@@ -263,9 +263,13 @@ ul li.leaf {
   .navbar-default .navbar-nav > li:nth-child(1) > a{
     width: 67px;
   }
-  .navbar-default .navbar-nav > li:nth-child(8) > a,
-  .navbar-default .navbar-nav > li:nth-child(5) > a,
+  .navbar-default .navbar-nav > li:nth-child(8) > a{
+    width: 115px;
+  }
   .navbar-default .navbar-nav > li:nth-child(2) > a{
+    width: 85px;
+  }
+  .navbar-default .navbar-nav > li:nth-child(5) > a{
     width: 85px;
   }
   .navbar-default .navbar-nav > li:nth-child(4) > a,
@@ -273,7 +277,7 @@ ul li.leaf {
     width: 110px;
   }
   .navbar-default .navbar-nav > li:nth-child(7) > a{
-    width: 115px;
+    width: 85px;
   }
 }
 @media (min-width: 768px){
@@ -925,4 +929,10 @@ body.page-convocatorias-noticias .view-convocatorias-noticias h4 a {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   cursor: pointer;
+}
+// QUICK FIXES
+
+body.page-imagenes .view-id-fotos_y_video .gallery-img img {
+  width: 100%;
+  height: auto;
 }

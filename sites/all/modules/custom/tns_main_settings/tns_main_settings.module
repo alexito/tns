@@ -63,10 +63,45 @@ function _tns_main_settings_events_year_month($date) {
  * Helper function to get the slider content.
  */
 function _tns_main_settings_get_eventos_main_carousel(){ 
-  $show_nodes = _tns_main_settings_get_eventos();
-
+  //$show_nodes = _tns_main_settings_get_eventos();
+  $show_nodes = _tns_main_settings_get_especial_queue();
   print theme('eventos_main_carousel', array('nodes' => $show_nodes));  
 }
+
+function prepare_results_main_carousel($node) {
+
+  $show_nodes = array();
+
+  $item = field_collection_item_load($node->field_informacion[LANGUAGE_NONE][0]['value']);
+
+
+  if ($node->status == 1) {
+    $wrapper = entity_metadata_wrapper('field_collection_item', $item);
+    $f_fecha = $wrapper->field_fecha->value();
+    $fecha = strtotime($f_fecha['value']);
+    if ($wrapper->field_escenario->value() != NULL) {
+      $escenario = $wrapper->field_escenario->value();
+    }
+    elseif ($wrapper->field_escenario_externo->value() != NULL) {
+      $escenario = $wrapper->field_escenario_externo->value();
+    }
+    //$escenario = ($wrapper->field_pertenece_al_tns->value()) ? $wrapper->field_escenario->value() : $wrapper->field_escenario_externo->value();
+    $detalles = new stdClass();
+    $detalles->fecha = $fecha;
+    $detalles->fecha_desde = $f_fecha['value'];
+    $detalles->fecha_hasta = $f_fecha['value2'];
+    $detalles->escenario = entity_metadata_wrapper('node', $escenario);
+
+    $show_nodes[$node->nid] = $node;
+    $show_nodes[$node->nid]->detalle = $detalles;
+  }
+
+
+  return $show_nodes;
+}
+
+
+
 
 function prepare_results($result) {
   $field_collection_items = array();
@@ -154,6 +189,10 @@ function _tns_main_settings_get_especial_queue(){
 
   foreach ($result as $res) {
     $node = node_load($res->nid);
+    if ($node->type == "evento") {
+      $resp = prepare_results_main_carousel($node);
+      $node = $resp[$node->nid];
+    }
     $show_nodes[$node->nid] = $node;
   }
   return $show_nodes;
