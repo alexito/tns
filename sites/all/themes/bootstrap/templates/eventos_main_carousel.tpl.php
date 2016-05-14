@@ -24,15 +24,17 @@
             <div class="row">
               <div class="col-sm-4 col-lg-3">
                 <div class="home-slider__content">
-
-
-
                   <?php
 
+                  $tipo_contenido = "Evento";
+                  if ($node->type == "convocatorias_noticias") {
+                    $tipo_contenido = "Noticia";
+                  }
+                  else if ($node->type == "fotos_y_videos") {
+                    $tipo_contenido = "Galería";
+                  }
 
-                  if ($node->type == "convocatorias_noticias") { ?>
-
-
+                  if ($node->type == "convocatorias_noticias" || $node->type == "fotos_y_videos") { ?>
 
 
                     <h1 class="first-child animated slideInDown delay-2 hidden-sm hidden-md hidden-lg slider-title">
@@ -46,6 +48,8 @@
                       print l((strlen($node->title) > 40) ? substr($node->title, 0, 40) . '...' : $node->title, 'node/' . $node->nid);
                       ?>
                     </h1>
+
+                    <h5 class="animated slideInLeft delay-3 slider-direccion"><i>(<?php print $tipo_contenido ?>)</i></h5>
 
                     <?php
                     $detalle_especial = strip_tags($node->body[LANGUAGE_NONE][0]['value']);
@@ -65,11 +69,7 @@
                     <?php print l('Ver más', 'node/' . $node->nid, array('attributes' => array('class' => 'btn btn-lg btn-theme-primary animated fadeInUpBig delay-4'))); ?>
 
 
-
-
                   <?php } else { ?>
-
-
 
 
                     <h1 class="first-child animated slideInDown delay-2 hidden-sm hidden-md hidden-lg slider-title">
@@ -83,9 +83,10 @@
                       print l((strlen($node->title) > 30) ? substr($node->title, 0, 30) . '...' : $node->title, 'node/' . $node->nid);
                       ?>
                     </h1>
+                    <h5 class="animated slideInLeft delay-2 slider-direccion "><i>(<?php print $tipo_contenido ?>)</i></h5>
 
-                    <h3 class="animated slideInDown delay-3 slider-escenario"><?php print $node->detalle->escenario->title->value(); ?></h3>
-                    <h5 class="animated slideInDown delay-3 slider-direccion"><?php print $node->detalle->escenario->field_ubicacion->value(); ?></h5>
+                    <h3 class="animated slideInLeft delay-2 slider-escenario"><?php print $node->detalle->escenario->title->value(); ?></h3>
+                    <h5 class="animated slideInLeft delay-3 slider-direccion"><?php print $node->detalle->escenario->field_ubicacion->value(); ?></h5>
                     <?php
                     $detalle_evento = strip_tags($node->body[LANGUAGE_NONE][0]['value']);
                     ?>
@@ -101,30 +102,24 @@
                       ?>
                     </p>
 
-                    <?php print l('Ver más', 'node/' . $node->nid, array('attributes' => array('class' => 'btn btn-lg btn-theme-primary animated fadeInUpBig delay-4'))); ?>
-
-
-
+                    <?php print l('Ver más', drupal_get_path_alias('node/' . $node->nid), array('attributes' => array('class' => 'btn btn-lg btn-theme-primary animated fadeInUpBig delay-4'))); ?>
 
                   <?php } ?>
-
-
-
 
                 </div>
               </div>
             </div> <!-- / .row -->
           </div> <!-- / .container -->
           <div class="bg-img hidden-xs">
-            <a href="/node/<?php print($node->nid) ?>">
+            <a href="<?php print(drupal_get_path_alias('node/' . $node->nid)) ?>">
 
-              <?php if ($node->type == "convocatorias_noticias") { ?>
+              <?php if ($node->type == "convocatorias_noticias" || $node->type == "fotos_y_videos") { ?>
 
-                <img src="<?php print file_create_url($node->field_imagen_menu['und'][0]['uri']); ?>" alt="...">
+                <img src="<?php print image_style_url('imagen_carousel_principal', $node->field_imagen_menu['und'][0]['uri']); ?>" alt="...">
 
               <?php } else { ?>
 
-                <img src="<?php print file_create_url($node->field_imagen_del_evento['und'][0]['uri']); ?>" alt="...">
+                <img src="<?php print image_style_url('imagen_carousel_principal', $node->field_imagen_del_evento['und'][0]['uri']); ?>" alt="...">
 
               <?php } ?>
             </a>
