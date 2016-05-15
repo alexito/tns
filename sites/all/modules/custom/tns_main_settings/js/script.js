@@ -2,6 +2,13 @@
   Drupal.behaviors.tns_main_settings = {
     attach: function (context, settings) {
       $(window).load(function () {
+        // Export to Excel links
+        setTimeout(function() {
+          var url = location.host + location.pathname + '/export' + location.search;
+          $(".export-excel").html('<a href="' + url + '" target="_blank">Exportar a Excel</a>');
+        }, 1000);
+
+
         //Accordion
         $('.accordion-group').each(function(i, e){
           $(this).parent().prepend(this);  
